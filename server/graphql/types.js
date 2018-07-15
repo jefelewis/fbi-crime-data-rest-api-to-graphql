@@ -1,24 +1,20 @@
 // GraphQL: TypeDefs
 const TYPEDEFS = `
   type Query {
-    getPokemon(id: Int!): Pokemon
-    getAllPokemon: Pokemon
+    getArson(state_abbr: String): Arson
   }
 
-  type Pokemon {
-    id: Int
-    name: String
-    height: Int
-    is_default: Boolean
-    order: Int
-    weight: String
-    abilities: [Abilities]
-    held_items: String
-    location_area_encounters: String
-    moves: [Moves]
-    species: [Species]
-    stats: [Stats]
-    types: [Types]
+  type Arson {
+    grouping_bitmap: Int
+    year: Int
+    state_abbr: String
+    reported: Int
+    unfounded: Int
+    actual: Int
+    cleared: Int
+    juvenile_cleared: Int
+    uninhabited: Int
+    est_damage_value: Int
   }
 `;
 

@@ -5,9 +5,9 @@ const fetch = require('node-fetch');
 // GraphQL: Resolvers
 const RESOLVERS = {
   Query: {
-    getPokemon: async (parent, args) => {
+    getArson: async (parent, args) => {
       const response = await 
-      fetch(`http://pokeapi.co/api/v2/pokemon/${args.id}`);
+      fetch(`https://api.usa.gov/crime/fbi/sapi/api/arson/states/CA?api_key=nVpjUwkbXUEb3IQZDmThbZ1SLsBruEnBoZpxfxxj`);
       return response.json();
     }
   }
