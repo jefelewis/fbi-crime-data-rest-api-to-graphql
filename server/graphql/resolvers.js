@@ -1,6 +1,8 @@
 // Imports: Node Fetch
 const fetch = require('node-fetch');
 
+import APIKEY from '/Users/jefflewis/Documents/Computer-Programming/Projects/Wrapped GraphQL REST APIs/fbi-crime-data-rest-api-to-graphql/config/config.js'
+
 
 // GraphQL: Resolvers
 const RESOLVERS = {
