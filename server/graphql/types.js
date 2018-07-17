@@ -4,7 +4,7 @@ const TYPEDEFS = `
     getArsonByState(stateAbbr: String): Arson
     getPoliceEmploymentByState(stateAbbr: String): PoliceEmployment
     getAgencyByState(stateAbbr: String): [Agency]
-    getAllAgencies: Agency
+    getAllAgencies: AgencyState
   }
 
   type Arson {
@@ -37,6 +37,14 @@ const TYPEDEFS = `
     pe_ct_per_1000: Int
   }
 
+  type AgencyState {
+    ori: Ori
+  }
+
+  type Ori {
+    agency: Agency
+  }
+
   type Agency {
     ori: String
     agency_name: String
@@ -51,6 +59,7 @@ const TYPEDEFS = `
     latitude: String
     longitude: String
   }
+
 
 `;
 
