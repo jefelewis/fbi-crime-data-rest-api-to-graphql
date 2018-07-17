@@ -1,10 +1,10 @@
 // GraphQL: TypeDefs
 const TYPEDEFS = `
   type Query {
-    getArson(stateAbbr: String): Arson
-    getPoliceEmployment(stateAbbr: String): PoliceEmployment
-    getAgency(stateAbbr: String): Agency
-    getAgencies: Agency
+    getArsonByState(stateAbbr: String): Arson
+    getPoliceEmploymentByState(stateAbbr: String): PoliceEmployment
+    getAgencyByState(stateAbbr: String): [Agency]
+    getAllAgencies: Agency
   }
 
   type Arson {
