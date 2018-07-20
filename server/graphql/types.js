@@ -6,9 +6,26 @@
 // GraphQL: TypeDefs
 const TYPEDEFS = `
   type Query {
-    getAllParticipation: ParticipationByNational
-    getParticipationByRegion(regionName: String): ParticipationByRegion
-    getParticipationByState(stateAbbreviation: String): ParticipationByState
+
+    getAllVictimData(offense: String, variable: String): Victim
+
+
+    getVictimDataByRegion(offense: String, regionName: String, variable: String): Victim
+    getVictimDataByState(offense: String, stateAbbreviation: String): Victim
+
+
+    getAllParticipationData: AllParticipation
+    getParticipationDataByRegion(regionName: String): ParticipationByRegion
+    getParticipationDataByState(stateAbbreviation: String): ParticipationByState
+
+    getVariableLookupForAgencies: AgencyLookup
+
+
+
+    getAllPoliceEmploymentData: AllPoliceEmployment
+    getPoliceEmploymentDataByRegion(regionName: String): PoliceEmploymentByRegion
+    getPoliceEmploymentDataByState(stateAbbreviation: String): PoliceEmploymentByState
+
   }
 
   type Pagination {
@@ -18,22 +35,37 @@ const TYPEDEFS = `
     per_page: Int
   }
 
-  type ParticipationByNational {
-    results: [AllParticipation]
+  type Victim {
+    ui_type: String
+    noun: String
+    title: String
+    short_title: String
+    data: [VictimData]
+  }
+
+  type VictimData {
+    value: Int
+    data_year: Int
+    key_type: String
+    key: String
+  }
+
+  type AllParticipation {
+    results: [AllParticipationData]
     pagination: Pagination
   }
 
   type ParticipationByRegion {
-    results: [RegionParticipation]
+    results: [RegionParticipationData]
     pagination: Pagination
   }
 
   type ParticipationByState {
-    results: [StateParticipation]
+    results: [StateParticipationData]
     pagination: Pagination
   }
 
-  type AllParticipation {
+  type AllParticipationData {
     data_year: Int
     population: Int
     total_agency_count: Int
@@ -48,7 +80,7 @@ const TYPEDEFS = `
     csv_header: String
   }
 
-  type RegionParticipation {
+  type RegionParticipationData {
     data_year: Int
     population: Int
     total_agency_count: Int
@@ -65,7 +97,7 @@ const TYPEDEFS = `
     csv_header: String
   }
 
-  type StateParticipation {
+  type StateParticipationData {
     data_year: Int
     population: Int
     total_agency_count: Int
@@ -96,24 +128,7 @@ const TYPEDEFS = `
     est_damage_value: Int
   }
 
-  type PoliceEmployment {
-    data_year: Int
-    civilian_ct: Int
-    female_civilian_ct: Int
-    female_officer_ct: Int
-    female_total_ct: Int
-    male_civilian_ct: Int
-    male_officer_ct: Int
-    male_total_ct: Int
-    population: Int
-    total_pe_ct: Int
-    state_id: Int
-    state_name: String
-    state_abbr: String
-    pe_ct_per_1000: Int
-  }
-
-  type AgencyState {
+  type AgencyLookup {
     ori: Ori
   }
 
@@ -134,6 +149,67 @@ const TYPEDEFS = `
     nibrs: Boolean
     latitude: Int
     longitude: Int
+  }
+
+  type AllPoliceEmployment {
+    results: [AllPoliceEmploymentData]
+    pagination: Pagination
+  }
+
+  type PoliceEmploymentByRegion {
+    results: [PoliceEmploymentByRegionData]
+    pagination: Pagination
+  }
+
+  type PoliceEmploymentByState {
+    results: [PoliceEmploymentByStateData]
+    pagination: Pagination
+  }
+
+  type AllPoliceEmploymentData {
+    data_year: Int
+    civilian_ct: Int
+    female_civilian_ct: Int
+    female_officer_ct: Int
+    female_total_ct: Int
+    male_civilian_ct: Int
+    male_officer_ct: Int
+    male_total_ct: Int
+    population: Int
+    total_pe_ct: Int
+    pe_ct_per_1000: String
+  }
+
+  type PoliceEmploymentByRegionData {
+    data_year: Int
+    civilian_ct: Int
+    female_civilian_ct: Int
+    female_officer_ct: Int
+    female_total_ct: Int
+    male_civilian_ct: Int
+    male_officer_ct: Int
+    male_total_ct: Int
+    population: Int
+    total_pe_ct: Int
+    region_code: Int
+    region_name: String
+    pe_ct_per_1000: String
+  }
+
+  type PoliceEmploymentByStateData {
+    data_year: Int
+    civilian_ct: Int
+    female_civilian_ct: Int
+    female_officer_ct: Int
+    female_total_ct: Int
+    male_civilian_ct: Int
+    male_officer_ct: Int
+    male_total_ct: Int
+    population: Int
+    total_pe_ct: Int
+    state_name: String
+    state_abb: String
+    pe_ct_per_1000: String
   }
 `;
 

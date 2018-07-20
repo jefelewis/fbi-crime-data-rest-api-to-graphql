@@ -41,34 +41,96 @@ const RESOLVERS = {
     // },
 
 
+    // VICTIM DATA
+    // Get all Victim Data (WORKING)
+    getAllVictimData: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/victim/national/${args.variable}?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Victim Data by Region
+    getVictimDataByRegion: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/victim/regions/${args.regionName}/${args.variable}?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Victim Data by State
+    getVictimDataByState: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/victim/states/${args.stateAbbreviation}/age?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
 
 
-
-
-    // PARTICIPATION
-    // Get all Participation
-    getAllParticipation: (parent, args) => {
+    // PARTICIPATION DATA
+    // Get all Participation Data (WORKING)
+    getAllParticipationData: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/participation/national/?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
-
-  
-    // Get Participation by Region
-    getParticipationByRegion: (parent, args) => {
+    // Get Participation Data by Region (WORKING)
+    getParticipationDataByRegion: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/participation/regions/${args.regionName}?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Participation Data by State (WORKING)
+    getParticipationDataByState: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/participation/states/${args.stateAbbreviation}?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
 
 
+    // // OFFENSE DATA
+    // // Get all Weapons Offense Data
+    // getAllWeaponsOffenseData: (parent, args) => {
+    //   return axios.get(``)
+    //   .then((response) => response.data)
+    //   .catch((error) => console.log(error))
+    // },
+    // // Get Weapons Offense Data by Region
+    // getAllWeaponsOffenseDataByRegion: (parent, args) => {
+    //   return axios.get(``)
+    //   .then((response) => response.data)
+    //   .catch((error) => console.log(error))
+    // },
+    // // Get Weapons Offense Data by State
+    // getAllWeaponsOffenseDataByState: (parent, args) => {
+    //   return axios.get(``)
+    //   .then((response) => response.data)
+    //   .catch((error) => console.log(error))
+    // }
 
-    // Get Participation by State (WORKING)
-    getParticipationByState: (parent, args) => {
-      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/participation/states/${args.stateAbbreviation}?api_key=${APIKEY}`)
+
+    // REST API VARIABLE LOOKUPS
+    getVariableLookupForAgencies: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/agencies/?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
-    }
+    },
+
+
+    // POLICE EMPLOYMENT (WORKING)
+    // Get all Police Employment Data (WORKING)
+    getAllPoliceEmploymentData: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/police-employment/national?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Police Employment Data by Region (WORKING)
+    getPoliceEmploymentDataByRegion: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/police-employment/regions/${args.regionName}/?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Police Employment Data by State (WORKING)
+    getPoliceEmploymentDataByState: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/police-employment/states/${args.stateAbbreviation}/?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
   }
 };
 
