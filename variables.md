@@ -22,3 +22,12 @@ offense:
 "arson"
 "violent-crime"
 "property-crime"
+
+
+variable:
+age
+count
+ethnicity
+race
+sex
+relationship
