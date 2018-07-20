@@ -1,11 +1,43 @@
+// getArsonByState(stateAbbr: String): Arson
+// getPoliceEmploymentByState(stateAbbr: String): PoliceEmployment
+// getAgencyByState(stateAbbr: String): [Agency]
+// getAllAgencies: AgencyState
+
 // GraphQL: TypeDefs
 const TYPEDEFS = `
   type Query {
-    getArsonByState(stateAbbr: String): Arson
-    getPoliceEmploymentByState(stateAbbr: String): PoliceEmployment
-    getAgencyByState(stateAbbr: String): [Agency]
-    getAllAgencies: AgencyState
+    getParticipationByState(stateAbbreviation: String): ParticipationByState
   }
+
+  type Pagination {
+    count: Int
+    page: Int
+    pages: Int
+    per_page: Int
+  }
+
+  type ParticipationByState {
+    results: [Participation]
+    pagination: Pagination
+  }
+
+  type Participation {
+    data_year: Int
+    population: Int
+    total_agency_count: Int
+    published_agency_count: Int
+    active_agency_count: Int
+    covered_agency_count: Int
+    population_covered: Int
+    agency_count_nibrs_submitting: Int
+    agency_count_leoka_submitting: Int
+    agency_count_pe_submitting: Int
+    agency_count_srs_submitting: Int
+    state_id: Int
+    state_abbr: String
+    csv_header: String
+  }
+
 
   type Arson {
     grouping_bitmap: Int
@@ -56,11 +88,9 @@ const TYPEDEFS = `
     region_desc: String
     county_name: String
     nibrs: Boolean
-    latitude: String
-    longitude: String
+    latitude: Int
+    longitude: Int
   }
-
-
 `;
 
 
