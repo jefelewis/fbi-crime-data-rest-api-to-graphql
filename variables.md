@@ -12,12 +12,13 @@ ori:
 "CA030350X"
 
 offense:
-"Homicide"
-"Rape"
-"Robbery"
-"Aggravated assualt"
-"Arson"
-"Burglary"
-"Larceny theft"
-"Motor vehicle theft"
-
+"aggravated-assualt"
+"burglary"
+"larceny"
+"motor-vehicle-theft"
+"homicide"
+"rape"
+"robbery"
+"arson"
+"violent-crime"
+"property-crime"
