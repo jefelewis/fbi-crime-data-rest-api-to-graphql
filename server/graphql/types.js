@@ -1,11 +1,13 @@
 // getArsonByState(stateAbbr: String): Arson
 // getPoliceEmploymentByState(stateAbbr: String): PoliceEmployment
-// getAgencyByState(stateAbbr: String): [Agency]
 // getAllAgencies: AgencyState
 
 // GraphQL: TypeDefs
 const TYPEDEFS = `
   type Query {
+    getAgencyByState(stateAbbr: String): [AgencyByState]
+    getAllParticipation: ParticipationByNational
+    getParticipationByRegion(regionName: String): ParticipationByRegion
     getParticipationByState(stateAbbreviation: String): ParticipationByState
   }
 
@@ -16,12 +18,37 @@ const TYPEDEFS = `
     per_page: Int
   }
 
-  type ParticipationByState {
-    results: [Participation]
+  type ParticipationByNational {
+    results: [AllParticipation]
     pagination: Pagination
   }
 
-  type Participation {
+  type ParticipationByRegion {
+    results: [RegionParticipation]
+    pagination: Pagination
+  }
+
+  type ParticipationByState {
+    results: [StateParticipation]
+    pagination: Pagination
+  }
+
+  type AllParticipation {
+    data_year: Int
+    population: Int
+    total_agency_count: Int
+    published_agency_count: Int
+    active_agency_count: Int
+    covered_agency_count: Int
+    population_covered: Int
+    agency_count_nibrs_submitting: Int
+    agency_count_leoka_submitting: Int
+    agency_count_pe_submitting: Int
+    agency_count_srs_submitting: Int
+    csv_header: String
+  }
+
+  type StateParticipation {
     data_year: Int
     population: Int
     total_agency_count: Int
