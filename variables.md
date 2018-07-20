@@ -3,6 +3,10 @@ stateAbbr:
 "CA"
 
 regionName: 
+"northeast"
+"west"
+"south"
+"midwest"
 
 ori:
 "CA030350X"
