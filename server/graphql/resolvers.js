@@ -121,7 +121,7 @@ const RESOLVERS = {
 
 
     // ARSON
-    // Get All Arson Data by State (WORKING)
+    // Get All Arson Data (WORKING)
     getAllArsonData: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/arson/national?api_key=${APIKEY}`)
       .then((response) => response.data)
@@ -141,6 +141,25 @@ const RESOLVERS = {
     },
 
 
+    // ESTIMATES (WORKING)
+    // Get All Estimate Data (WORKING)
+    getAllEstimateData: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/estimates/national?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Estimate Data by Region (WORKING)
+    getEstimateDataByRegion: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/estimates/regions/${args.regionName}?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Estimate Data by State (WORKING)
+    getEstimateDataByState: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/estimates/states/${args.stateAbbreviation}?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
   }
 };
 

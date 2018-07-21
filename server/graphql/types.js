@@ -26,6 +26,10 @@ const TYPEDEFS = `
     getAllArsonData: AllArson
     getArsonDataByRegion(regionName: String): ArsonByRegion
     getArsonDataByState(stateAbbreviation: String): ArsonByState
+
+    getAllEstimateData: AllEstimate
+    getEstimateDataByRegion(regionName: String): EstimateByRegion
+    getEstimateDataByState(stateAbbreviation: String): EstimateByState
   }
 
   type Pagination {
@@ -257,6 +261,77 @@ const TYPEDEFS = `
     est_damage_value: Int
   }
 
+
+
+
+  type AllEstimate {
+    results: [AllEstimateData]
+    pagination: Pagination
+  }
+
+  type AllEstimateData {
+    state_abbr: String
+    year: Int
+    population: Int
+    violent_crime: Int
+    homicide: Int
+    rape_legacy: Int
+    rape_revised: Int
+    robbery: Int
+    aggravated_assault: Int
+    property_crime: Int
+    burglary: Int
+    larceny: Int
+    motor_vehicle_theft: Int
+    arson: Int
+  }
+  
+  type EstimateByRegion {
+    results: [RegionEstimateData]
+    pagination: Pagination
+  }
+
+  type RegionEstimateData {
+    state_id: Int
+    state_abbr: String
+    year: Int
+    population: Int
+    violent_crime: Int
+    homicide: Int
+    rape_legacy: Int
+    rape_revised: Int
+    robbery: Int
+    aggravated_assault: Int
+    property_crime: Int
+    burglary: Int
+    larceny: Int
+    motor_vehicle_theft: Int
+    arson: Int
+  }
+  
+
+  type EstimateByState {
+    results: [StateEstimateData]
+    pagination: Pagination
+  }
+
+  type StateEstimateData {
+    state_id: Int
+    state_abbr: String
+    year: Int
+    population: Int
+    violent_crime: Int
+    homicide: Int
+    rape_legacy: Int
+    rape_revised: Int
+    robbery: Int
+    aggravated_assault: Int
+    property_crime: Int
+    burglary: Int
+    larceny: Int
+    motor_vehicle_theft: Int
+    arson: Int
+  }
 `;
 
 
