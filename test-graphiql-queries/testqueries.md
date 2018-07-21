@@ -196,6 +196,54 @@
     }
   }
 
+{
+  getArsonDataByState(stateAbbreviation: "CA") {
+    pagination {
+      count
+      page
+      pages
+      per_page
+    }
+    results {
+      grouping_bitmap
+      year
+      state_abbr
+      ori
+      reported
+      unfounded
+      actual
+      cleared
+      juvenile_cleared
+      uninhabited
+      est_damage_value
+    }
+  }
+}
+
+{
+  getArsonDataByRegion(regionName: "west") {
+    pagination {
+      count
+      page
+      pages
+      per_page
+    }
+    results {
+      grouping_bitmap
+      year
+      state_abbr
+      ori
+      reported
+      unfounded
+      actual
+      cleared
+      juvenile_cleared
+      uninhabited
+      est_damage_value
+    }
+  }
+}
+
 
 {
   getAllEstimateData {
