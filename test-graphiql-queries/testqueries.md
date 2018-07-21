@@ -195,4 +195,90 @@
       est_damage_value
     }
   }
+
+
+{
+  getAllEstimateData {
+  	pagination {
+  	  count
+  	  page
+  	  pages
+  	  per_page
+  	}
+  	results {
+    	state_abbr
+      year
+      population
+      violent_crime
+      homicide
+      rape_legacy
+      rape_revised
+      robbery
+      aggravated_assault
+      property_crime
+      burglary
+      larceny
+      motor_vehicle_theft
+      arson
+    }
+  }
+}
+
+
+{
+  getEstimateDataByState (stateAbbreviation: "CA"){
+  	pagination {
+  	  count
+  	  page
+  	  pages
+  	  per_page
+  	}
+  	results {
+      state_id
+    	state_abbr
+      year
+      population
+      violent_crime
+      homicide
+      rape_legacy
+      rape_revised
+      robbery
+      aggravated_assault
+      property_crime
+      burglary
+      larceny
+      motor_vehicle_theft
+      arson
+    }
+  }
+}
+
+{
+  getEstimateDataByRegion (regionName: "west"){
+  	pagination {
+  	  count
+  	  page
+  	  pages
+  	  per_page
+  	}
+  	results {
+      state_id
+    	state_abbr
+      year
+      population
+      violent_crime
+      homicide
+      rape_legacy
+      rape_revised
+      robbery
+      aggravated_assault
+      property_crime
+      burglary
+      larceny
+      motor_vehicle_theft
+      arson
+    }
+  }
+}
+
 }
