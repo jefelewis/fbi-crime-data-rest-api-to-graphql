@@ -1,5 +1,3 @@
-// getArsonByState(stateAbbr: String): Arson
-// getPoliceEmploymentByState(stateAbbr: String): PoliceEmployment
 // getAllAgencies: AgencyState
 // getAgencyByState(stateAbbr: String): [AgencyByState]
 
@@ -21,11 +19,13 @@ const TYPEDEFS = `
     getVariableLookupForAgencies: AgencyLookup
 
 
-
     getAllPoliceEmploymentData: AllPoliceEmployment
     getPoliceEmploymentDataByRegion(regionName: String): PoliceEmploymentByRegion
     getPoliceEmploymentDataByState(stateAbbreviation: String): PoliceEmploymentByState
 
+    getAllArsonData: AllArson
+    getArsonDataByRegion(regionName: String): ArsonByRegion
+    getArsonDataByState(stateAbbreviation: String): ArsonByState
   }
 
   type Pagination {
@@ -114,11 +114,54 @@ const TYPEDEFS = `
     csv_header: String
   }
 
+  type AllArson {
+    results: [AllArsonData]
+    pagination: Pagination
+  }
 
-  type Arson {
+  type ArsonByRegion {
+    results: [RegionArsonData]
+    pagination: Pagination
+  }
+
+  type ArsonByState {
+    results: [StateArsonData]
+    pagination: Pagination
+  }
+
+  type AllArsonData {
     grouping_bitmap: Int
     year: Int
     state_abbr: String
+    ori: String
+    reported: Int
+    unfounded: Int
+    actual: Int
+    cleared: Int
+    juvenile_cleared: Int
+    uninhabited: Int
+    est_damage_value: Int
+  }
+
+  type RegionArsonData {
+    grouping_bitmap: Int
+    year: Int
+    state_abbr: String
+    ori: String
+    reported: Int
+    unfounded: Int
+    actual: Int
+    cleared: Int
+    juvenile_cleared: Int
+    uninhabited: Int
+    est_damage_value: Int
+  }
+
+  type StateArsonData {
+    grouping_bitmap: Int
+    year: Int
+    state_abbr: String
+    ori: String
     reported: Int
     unfounded: Int
     actual: Int

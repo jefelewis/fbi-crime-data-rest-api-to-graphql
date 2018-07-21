@@ -10,19 +10,6 @@ import APIKEY from '/Users/jefflewis/Documents/Computer-Programming/Projects/Con
 // GraphQL: Resolvers
 const RESOLVERS = {
   Query: {
-    // ARSON
-    // Get Arson by State
-    // getArsonByState: (parent, args) => {
-    //   return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/arson/states/${args.stateAbbr}?api_key=${APIKEY}`)
-    //   .then((response) => response.data)
-    //   .catch((error) => console.log(error))
-    // },
-    // // Get Police Employment by State
-    // getPoliceEmploymentByState: (parent, args) => {
-    //   return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/police-employment/states/${args.stateAbbr}?api_key=${APIKEY}`)
-    //   .then((response) => response.data)
-    //   .catch((error) => console.log(error))
-    // },
     // // Get Agency by State
     // getAgencyByState: (parent, args) => {
     //   return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/agencies/byStateAbbr/${args.stateAbbr}?api_key=${APIKEY}`)
@@ -131,6 +118,29 @@ const RESOLVERS = {
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
+
+
+    // ARSON
+    // Get All Arson Data by State
+    getAllArsonData: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/arson/states/${args.stateAbbr}?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Arson Data by Region
+    getArsonDataByRegion: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/arson/regions/${args.regionName}?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Arson Data by State
+    getArsonDataByState: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/arson/states/${args.stateAbbreviation}?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+
+
   }
 };
 
