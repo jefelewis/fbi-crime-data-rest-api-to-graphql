@@ -121,9 +121,9 @@ const RESOLVERS = {
 
 
     // ARSON
-    // Get All Arson Data by State
+    // Get All Arson Data by State (WORKING)
     getAllArsonData: (parent, args) => {
-      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/arson/states/${args.stateAbbr}?api_key=${APIKEY}`)
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/arson/national?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },

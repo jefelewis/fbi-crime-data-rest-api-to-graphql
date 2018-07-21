@@ -114,63 +114,6 @@ const TYPEDEFS = `
     csv_header: String
   }
 
-  type AllArson {
-    results: [AllArsonData]
-    pagination: Pagination
-  }
-
-  type ArsonByRegion {
-    results: [RegionArsonData]
-    pagination: Pagination
-  }
-
-  type ArsonByState {
-    results: [StateArsonData]
-    pagination: Pagination
-  }
-
-  type AllArsonData {
-    grouping_bitmap: Int
-    year: Int
-    state_abbr: String
-    ori: String
-    reported: Int
-    unfounded: Int
-    actual: Int
-    cleared: Int
-    juvenile_cleared: Int
-    uninhabited: Int
-    est_damage_value: Int
-  }
-
-  type RegionArsonData {
-    grouping_bitmap: Int
-    year: Int
-    state_abbr: String
-    ori: String
-    reported: Int
-    unfounded: Int
-    actual: Int
-    cleared: Int
-    juvenile_cleared: Int
-    uninhabited: Int
-    est_damage_value: Int
-  }
-
-  type StateArsonData {
-    grouping_bitmap: Int
-    year: Int
-    state_abbr: String
-    ori: String
-    reported: Int
-    unfounded: Int
-    actual: Int
-    cleared: Int
-    juvenile_cleared: Int
-    uninhabited: Int
-    est_damage_value: Int
-  }
-
   type AgencyLookup {
     ori: Ori
   }
@@ -254,6 +197,66 @@ const TYPEDEFS = `
     state_abb: String
     pe_ct_per_1000: String
   }
+
+
+  type AllArson {
+    results: [AllArsonData]
+    pagination: Pagination
+  }
+
+  type AllArsonData {
+    grouping_bitmap: Int
+    year: Int
+    state_abbr: String
+    ori: String
+    reported: Int
+    unfounded: Int
+    actual: Int
+    cleared: Int
+    juvenile_cleared: Int
+    uninhabited: Int
+    est_damage_value: Int
+  }
+  
+  type ArsonByRegion {
+    results: [RegionArsonData]
+    pagination: Pagination
+  }
+
+  type RegionArsonData {
+    grouping_bitmap: Int
+    year: Int
+    state_abbr: String
+    ori: String
+    reported: Int
+    unfounded: Int
+    actual: Int
+    cleared: Int
+    juvenile_cleared: Int
+    uninhabited: Int
+    est_damage_value: Int
+  }
+  
+
+  type ArsonByState {
+    results: [StateArsonData]
+    pagination: Pagination
+  }
+
+  type StateArsonData {
+    grouping_bitmap: Int
+    year: Int
+    state_abbr: String
+    ori: String
+    reported: Int
+    unfounded: Int
+    actual: Int
+    cleared: Int
+    juvenile_cleared: Int
+    uninhabited: Int
+    est_damage_value: Int
+  }
+
 `;
 
 
