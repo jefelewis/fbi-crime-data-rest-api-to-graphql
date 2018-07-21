@@ -170,3 +170,29 @@
     }
   }
 }
+
+
+
+{
+  getAllArsonData {
+   pagination {
+    count
+    page
+    pages
+    per_page
+  }
+    results {
+      grouping_bitmap
+      year
+      state_abbr
+      ori
+      reported
+      unfounded
+      actual
+      cleared
+      juvenile_cleared
+      uninhabited
+      est_damage_value
+    }
+  }
+}
