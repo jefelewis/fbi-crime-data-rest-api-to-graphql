@@ -120,20 +120,20 @@ const RESOLVERS = {
     },
 
 
-    // ARSON
+    // ARSON (WORKING)
     // Get All Arson Data (WORKING)
     getAllArsonData: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/arson/national?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
-    // Get Arson Data by Region
+    // Get Arson Data by Region (WORKING)
     getArsonDataByRegion: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/arson/regions/${args.regionName}?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
-    // Get Arson Data by State
+    // Get Arson Data by State (WORKING)
     getArsonDataByState: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/arson/states/${args.stateAbbreviation}?api_key=${APIKEY}`)
       .then((response) => response.data)
