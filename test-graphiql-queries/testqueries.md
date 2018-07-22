@@ -1,12 +1,12 @@
 {
-  getAllWeaponOffenseData (offense: "aggravated-assault"){
-    uri_type
+  getAllOffenseData(offense: "burglary") {
+   uri_type
     noun
     category
     title
     short_title
     data {
-     value
+      value
       data_year
       key_type
       key
