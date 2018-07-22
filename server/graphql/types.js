@@ -18,7 +18,9 @@ const TYPEDEFS = `
 
     getVariableLookupForAgencies: AgencyLookup
 
-    
+    getAllOffenseData(offense: String): AllOffense
+    getOffenseDataByRegion(offense: String, regionName: String): OffenseByRegion
+    getOffenseDataByState(offense: String, stateAbbreviation: String): OffenseByState 
 
     getAllWeaponOffenseData(offense: String): AllWeaponOffense
     getWeaponOffenseDataByRegion(offense: String, regionName: String): WeaponOffenseByRegion
@@ -122,6 +124,63 @@ const TYPEDEFS = `
     state_abbr: String
     csv_header: String
   }
+
+
+
+
+
+
+  type AllOffense {
+    uri_type: String
+    noun: String
+    category: String
+    title: String
+    short_title: String
+    data: [AllOffenseData]
+  }
+
+  type OffenseByRegion {
+    uri_type: String
+    noun: String
+    category: String
+    title: String
+    short_title: String
+    data: [RegionOffenseData]
+  }
+
+  type OffenseByState {
+    uri_type: String
+    noun: String
+    category: String
+    title: String
+    short_title: String
+    data: [StateOffenseData]
+  }
+
+  type AllOffenseData {
+    value: Int
+    data_year: Int
+    key_type: String
+    key: String
+  }
+
+  type RegionOffenseData {
+    value: Int
+    data_year: Int
+    key_type: String
+    key: String
+  }
+
+  type StateOffenseData {
+    value: Int
+    data_year: Int
+    key_type: String
+    key: String
+  }
+
+
+
+
 
 
 

@@ -74,6 +74,24 @@ const RESOLVERS = {
 
 
     // OFFENSE DATA (WORKING)
+    // Get all Offense Data 
+    getAllOffenseData: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/national?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Offense Data by Region (WORKING)
+    getOffenseDataByRegion: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/regions/${args.regionName}/count?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Offense Data by State (WORKING)
+    getOffenseDataByState: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/states/${args.stateAbbreviation}/count?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
     // Get all Weapons Offense Data
     getAllWeaponOffenseData: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/weapons/national/count?api_key=${APIKEY}`)
