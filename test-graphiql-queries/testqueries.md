@@ -49,6 +49,46 @@
 
 
 {
+  getLinkedOffenseDataByRegion(offense: "burglary", regionName: "midwest"){
+    uri_type
+    noun
+    category
+    title
+    short_title
+    data {
+      value
+      data_year
+      key_type
+      key
+    }
+  }
+}
+
+{
+  getLinkedOffenseDataByState(offense: "burglary", stateAbbreviation: "TX"){
+    uri_type
+    noun
+    category
+    title
+    short_title
+    data {
+      value
+      data_year
+      key_type
+      key
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+{
   getWeaponOffenseDataByState(stateAbbreviation: "ca", offense: "aggravated-assault"){
     uri_type
     noun
