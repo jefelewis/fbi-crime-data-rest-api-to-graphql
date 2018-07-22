@@ -1,4 +1,61 @@
 {
+  getAllOffenderData(offense: "burglary", variable: "count") {
+    noun
+    category
+    ui_type
+    title
+    short_title
+    data {
+      value
+      data_year
+      key_type
+      key
+    }
+  }
+}
+
+{
+  getOffenderDataByRegion(offense: "burglary", variable: "count", regionName: "midwest") {
+    noun
+    category
+    ui_type
+    title
+    short_title
+    data {
+      value
+      data_year
+      key_type
+      key
+    }
+  }
+}
+
+{
+  getOffenderDataByState(offense: "burglary", variable: "count", stateAbbreviation: "tx") {
+    noun
+    category
+    ui_type
+    title
+    short_title
+    data {
+      value
+      data_year
+      key_type
+      key
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+{
   getAllOffenseData(offense: "burglary") {
    uri_type
     noun
