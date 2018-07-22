@@ -10,15 +10,6 @@ import APIKEY from '/Users/jefflewis/Documents/Computer-Programming/Projects/Con
 // GraphQL: Resolvers
 const RESOLVERS = {
   Query: {
-    // // Get Agency by State
-    // getAgencyByState: (parent, args) => {
-    //   return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/agencies/byStateAbbr/${args.stateAbbr}?api_key=${APIKEY}`)
-    //   .then((response) => response.data)
-    //   .catch((error) => console.log(error))
-    // },
-
-
-
 
     // // Get all Agencies
     // getAllAgencies: (parent, args) => {
@@ -48,6 +39,7 @@ const RESOLVERS = {
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
+
 
 
     // OFFENDER DATA (WORKING)

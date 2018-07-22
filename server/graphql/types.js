@@ -1,6 +1,3 @@
-// getAllAgencies: AgencyState
-// getAgencyByState(stateAbbr: String): [AgencyByState]
-
 // GraphQL: TypeDefs
 const TYPEDEFS = `
   type Query {
@@ -9,9 +6,9 @@ const TYPEDEFS = `
     getVictimDataByRegion(offense: String, regionName: String, variable: String): Victim
     getVictimDataByState(offense: String, stateAbbreviation: String, variable: String): Victim
 
-    getAllOffenderData(offense: String, variable: String): AllOffender
-    getOffenderDataByRegion(offense: String, regionName: String, variable: String): OffenderByRegion
-    getOffenderDataByState(offense: String, stateAbbreviation: String, variable: String): OffenderByState
+    getAllOffenderData(offense: String, variable: String): Offender
+    getOffenderDataByRegion(offense: String, regionName: String, variable: String): Offender
+    getOffenderDataByState(offense: String, stateAbbreviation: String, variable: String): Offender
 
     getAllParticipationData: AllParticipation
     getParticipationDataByRegion(regionName: String): ParticipationByRegion
@@ -19,17 +16,17 @@ const TYPEDEFS = `
 
     getVariableLookupForAgencies: AgencyLookup
 
-    getAllOffenseData(offense: String): AllOffense
-    getOffenseDataByRegion(offense: String, regionName: String): OffenseByRegion
-    getOffenseDataByState(offense: String, stateAbbreviation: String): OffenseByState
+    getAllOffenseData(offense: String): Offense
+    getOffenseDataByRegion(offense: String, regionName: String): Offense
+    getOffenseDataByState(offense: String, stateAbbreviation: String): Offense
 
-    getAllLinkedOffenseData(offense: String): AllLinkedOffense
-    getLinkedOffenseDataByRegion(offense: String, regionName: String): LinkedOffenseByRegion
-    getLinkedOffenseDataByState(offense: String, stateAbbreviation: String): LinkedOffenseByState
+    getAllLinkedOffenseData(offense: String): LinkedOffense
+    getLinkedOffenseDataByRegion(offense: String, regionName: String): LinkedOffense
+    getLinkedOffenseDataByState(offense: String, stateAbbreviation: String): LinkedOffense
 
-    getAllWeaponOffenseData(offense: String): AllWeaponOffense
-    getWeaponOffenseDataByRegion(offense: String, regionName: String): WeaponOffenseByRegion
-    getWeaponOffenseDataByState(offense: String, stateAbbreviation: String): WeaponOffenseByState   
+    getAllWeaponOffenseData(offense: String): WeaponOffense
+    getWeaponOffenseDataByRegion(offense: String, regionName: String): WeaponOffense
+    getWeaponOffenseDataByState(offense: String, stateAbbreviation: String): WeaponOffense   
 
     getAllPoliceEmploymentData: AllPoliceEmployment
     getPoliceEmploymentDataByRegion(regionName: String): PoliceEmploymentByRegion
@@ -134,48 +131,15 @@ const TYPEDEFS = `
 
 
 
-  type AllOffender {
+  type Offender {
     ui_type: String
     noun: String
     category: String
     title: String
     short_title: String
-    data: [AllOffenderData]
+    data: [OffenderData]
   }
-
-  type OffenderByRegion {
-    ui_type: String
-    noun: String
-    category: String
-    title: String
-    short_title: String
-    data: [RegionOffenderData]
-  }
-
-  type OffenderByState {
-    ui_type: String
-    noun: String
-    category: String
-    title: String
-    short_title: String
-    data: [StateOffenderData]
-  }
-
-  type AllOffenderData {
-    value: Int
-    data_year: Int
-    key_type: String
-    key: String
-  }
-
-  type RegionOffenderData {
-    value: Int
-    data_year: Int
-    key_type: String
-    key: String
-  }
-
-  type StateOffenderData {
+  type OffenderData {
     value: Int
     data_year: Int
     key_type: String
@@ -193,157 +157,53 @@ const TYPEDEFS = `
 
 
 
-  type AllOffense {
+  type Offense {
     uri_type: String
     noun: String
     category: String
     title: String
     short_title: String
-    data: [AllOffenseData]
+    data: [OffenseData]
   }
 
-  type OffenseByRegion {
+  type OffenseData {
+    value: Int
+    data_year: Int
+    key_type: String
+    key: String
+  }
+
+  type LinkedOffense {
     uri_type: String
     noun: String
     category: String
     title: String
     short_title: String
-    data: [RegionOffenseData]
+    data: [LinkedOffenseData]
   }
 
-  type OffenseByState {
+  type LinkedOffenseData {
+    value: Int
+    data_year: Int
+    key_type: String
+    key: String
+  }
+
+  type WeaponOffense {
     uri_type: String
     noun: String
     category: String
     title: String
     short_title: String
-    data: [StateOffenseData]
+    data: [WeaponOffenseData]
   }
 
-  type AllOffenseData {
+  type WeaponOffenseData {
     value: Int
     data_year: Int
     key_type: String
     key: String
   }
-
-  type RegionOffenseData {
-    value: Int
-    data_year: Int
-    key_type: String
-    key: String
-  }
-
-  type StateOffenseData {
-    value: Int
-    data_year: Int
-    key_type: String
-    key: String
-  }
-
-  type AllLinkedOffense {
-    uri_type: String
-    noun: String
-    category: String
-    title: String
-    short_title: String
-    data: [AllLinkedOffenseData]
-  }
-
-  type LinkedOffenseByRegion {
-    uri_type: String
-    noun: String
-    category: String
-    title: String
-    short_title: String
-    data: [RegionLinkedOffenseData]
-  }
-
-  type LinkedOffenseByState {
-    uri_type: String
-    noun: String
-    category: String
-    title: String
-    short_title: String
-    data: [StateLinkedOffenseData]
-  }
-
-  type AllLinkedOffenseData {
-    value: Int
-    data_year: Int
-    key_type: String
-    key: String
-  }
-
-  type RegionLinkedOffenseData {
-    value: Int
-    data_year: Int
-    key_type: String
-    key: String
-  }
-
-  type StateLinkedOffenseData {
-    value: Int
-    data_year: Int
-    key_type: String
-    key: String
-  }
-
-  type AllWeaponOffense {
-    uri_type: String
-    noun: String
-    category: String
-    title: String
-    short_title: String
-    data: [AllWeaponOffenseData]
-  }
-
-  type WeaponOffenseByRegion {
-    uri_type: String
-    noun: String
-    category: String
-    title: String
-    short_title: String
-    data: [RegionWeaponOffenseData]
-  }
-
-  type WeaponOffenseByState {
-    uri_type: String
-    noun: String
-    category: String
-    title: String
-    short_title: String
-    data: [StateWeaponOffenseData]
-  }
-
-  type AllWeaponOffenseData {
-    value: Int
-    data_year: Int
-    key_type: String
-    key: String
-  }
-
-  type RegionWeaponOffenseData {
-    value: Int
-    data_year: Int
-    key_type: String
-    key: String
-  }
-
-  type StateWeaponOffenseData {
-    value: Int
-    data_year: Int
-    key_type: String
-    key: String
-  }
-
-
-
-
-
-
-
-
 
   type AgencyLookup {
     ori: Ori
