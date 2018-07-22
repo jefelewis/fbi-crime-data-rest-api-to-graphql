@@ -20,7 +20,11 @@ const TYPEDEFS = `
 
     getAllOffenseData(offense: String): AllOffense
     getOffenseDataByRegion(offense: String, regionName: String): OffenseByRegion
-    getOffenseDataByState(offense: String, stateAbbreviation: String): OffenseByState 
+    getOffenseDataByState(offense: String, stateAbbreviation: String): OffenseByState
+
+    getAllLinkedOffenseData(offense: String): AllLinkedOffense
+    getLinkedOffenseDataByRegion(offense: String, regionName: String): LinkedOffenseByRegion
+    getLinkedOffenseDataByState(offense: String, stateAbbreviation: String): LinkedOffenseByState
 
     getAllWeaponOffenseData(offense: String): AllWeaponOffense
     getWeaponOffenseDataByRegion(offense: String, regionName: String): WeaponOffenseByRegion
@@ -178,16 +182,53 @@ const TYPEDEFS = `
     key: String
   }
 
+  type AllLinkedOffense {
+    uri_type: String
+    noun: String
+    category: String
+    title: String
+    short_title: String
+    data: [AllLinkedOffenseData]
+  }
 
+  type LinkedOffenseByRegion {
+    uri_type: String
+    noun: String
+    category: String
+    title: String
+    short_title: String
+    data: [RegionLinkedOffenseData]
+  }
 
+  type LinkedOffenseByState {
+    uri_type: String
+    noun: String
+    category: String
+    title: String
+    short_title: String
+    data: [StateLinkedOffenseData]
+  }
 
+  type AllLinkedOffenseData {
+    value: Int
+    data_year: Int
+    key_type: String
+    key: String
+  }
 
+  type RegionLinkedOffenseData {
+    value: Int
+    data_year: Int
+    key_type: String
+    key: String
+  }
 
-
-
-
-
-
+  type StateLinkedOffenseData {
+    value: Int
+    data_year: Int
+    key_type: String
+    key: String
+  }
 
   type AllWeaponOffense {
     uri_type: String

@@ -95,6 +95,27 @@ const RESOLVERS = {
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
+    // Get all Linked Offense Data (WORKING)
+    // No Pagination
+    getAllLinkedOffenseData: (parent, args) => {
+      return axios.get(``)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Linked Offense Data by Region (WORKING)
+    // No Pagination
+    getLinkedOffenseDataByRegion: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/linkedoffense/regions/${args.regionName}/count?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Linked Offense Data by State (WORKING)
+    // No Pagination
+    getLinkedOffenseDataByState: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/linkedoffense/states/${args.stateAbbreviation}/count?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
     // Get all Weapons Offense Data (CONNECTION IS WORKING, BUT THE RESULTS ARRAY IS EMPTY)
     // No Pagination
     getAllWeaponOffenseData: (parent, args) => {
