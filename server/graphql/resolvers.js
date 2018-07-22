@@ -50,21 +50,48 @@ const RESOLVERS = {
     },
 
 
+    // OFFENDER DATA
+    // Get all Offender Data (WORKING)
+    // No Pagination
+    getAllOffenderData: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offender/national/${args.variable}?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Offender Data by Region
+    // No Pagination
+    getOffenderDataByRegion: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offender/regions/${args.regionName}/${args.variable}?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Offender Data by State
+    // No Pagination
+    getOffenderDataByState: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offender/states/${args.stateAbbreviation}/${args.variable}?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+
+
 
     // PARTICIPATION DATA
     // Get all Participation Data (WORKING)
+    // No Pagination
     getAllParticipationData: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/participation/national/?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
     // Get Participation Data by Region (WORKING)
+    // No Pagination
     getParticipationDataByRegion: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/participation/regions/${args.regionName}?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
     // Get Participation Data by State (WORKING)
+    // No Pagination
     getParticipationDataByState: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/participation/states/${args.stateAbbreviation}?api_key=${APIKEY}`)
       .then((response) => response.data)

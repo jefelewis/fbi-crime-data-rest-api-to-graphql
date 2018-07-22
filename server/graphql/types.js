@@ -7,10 +7,12 @@ const TYPEDEFS = `
 
     getAllVictimData(offense: String, variable: String): Victim
 
-
     getVictimDataByRegion(offense: String, regionName: String, variable: String): Victim
     getVictimDataByState(offense: String, stateAbbreviation: String): Victim
 
+    getAllOffenderData(offense: String, variable: String): AllOffender
+    getOffenderDataByRegion(offense: String, regionName: String, variable: String): OffenderByRegion
+    getOffenderDataByState(offense: String, stateAbbreviation: String, variable: String): OffenderByState
 
     getAllParticipationData: AllParticipation
     getParticipationDataByRegion(regionName: String): ParticipationByRegion
@@ -128,6 +130,63 @@ const TYPEDEFS = `
     state_abbr: String
     csv_header: String
   }
+
+
+
+
+  type AllOffender {
+    ui_type: String
+    noun: String
+    category: String
+    title: String
+    short_title: String
+    data: [AllOffenderData]
+  }
+
+  type OffenderByRegion {
+    ui_type: String
+    noun: String
+    category: String
+    title: String
+    short_title: String
+    data: [RegionOffenderData]
+  }
+
+  type OffenderByState {
+    ui_type: String
+    noun: String
+    category: String
+    title: String
+    short_title: String
+    data: [StateOffenderData]
+  }
+
+  type AllOffenderData {
+    value: Int
+    data_year: Int
+    key_type: String
+    key: String
+  }
+
+  type RegionOffenderData {
+    value: Int
+    data_year: Int
+    key_type: String
+    key: String
+  }
+
+  type StateOffenderData {
+    value: Int
+    data_year: Int
+    key_type: String
+    key: String
+  }
+
+
+
+
+
+
 
 
 
