@@ -36,13 +36,13 @@ const RESOLVERS = {
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
-    // Get Victim Data by Region
+    // Get Victim Data by Region (NOT WORKING. LOOKS LIKE URL PATH FROM REST API IS BAD)
     getVictimDataByRegion: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/victim/regions/${args.regionName}/${args.variable}?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
-    // Get Victim Data by State
+    // Get Victim Data by State (WORKING)
     getVictimDataByState: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/victim/states/${args.stateAbbreviation}/age?api_key=${APIKEY}`)
       .then((response) => response.data)
@@ -50,7 +50,7 @@ const RESOLVERS = {
     },
 
 
-    // OFFENDER DATA
+    // OFFENDER DATA (WORKING)
     // Get all Offender Data (WORKING)
     // No Pagination
     getAllOffenderData: (parent, args) => {
@@ -58,14 +58,14 @@ const RESOLVERS = {
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
-    // Get Offender Data by Region
+    // Get Offender Data by Region (WORKING)
     // No Pagination
     getOffenderDataByRegion: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offender/regions/${args.regionName}/${args.variable}?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
-    // Get Offender Data by State
+    // Get Offender Data by State (WORKING)
     // No Pagination
     getOffenderDataByState: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offender/states/${args.stateAbbreviation}/${args.variable}?api_key=${APIKEY}`)
