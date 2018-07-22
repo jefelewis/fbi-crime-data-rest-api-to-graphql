@@ -44,6 +44,23 @@
   }
 }
 
+{
+  getOffenderDataByAgency(offense: "burglary", ori: "HI0010100", variable: "count"){
+    pagination {
+      count
+      page
+      pages
+      per_page
+    }
+    results {
+      ori
+      data_year
+      cleared
+      actual
+    }
+  }
+}
+
 
 {
   getAllOffenderData(offense: "burglary", variable: "count") {
@@ -384,6 +401,36 @@
   }
 }
 
+{
+  getPoliceEmploymentDataByAgency(ori: "HI0010100") {
+  	pagination {
+  	  count
+  	  page
+  	  pages
+  	  per_page
+  	}
+  	results{
+      data_year
+      civilian_ct
+      female_civilian_ct
+      female_officer_ct
+      female_total_ct
+      male_civilian_ct
+      male_total_ct
+      population
+      total_pe_ct
+      ori
+      ncic_agency_name
+      agency_name_edit
+      agency_type_name
+      state_name
+      state_abb
+      pe_ct_per_1000
+    }
+  }
+}
+
+
 
 
 {
@@ -542,4 +589,20 @@
   }
 }
 
+
+{
+  getAgencyByOri(ori: "HI0010100") {
+    ori
+    agency_name
+    agency_type_name
+    state_name
+    state_abbr
+    division_name
+    region_name
+    region_desc
+    county_name
+    nibrs
+    latitude
+    longitude
+  }
 }
