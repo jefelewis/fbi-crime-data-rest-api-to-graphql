@@ -74,37 +74,43 @@ const RESOLVERS = {
 
 
     // OFFENSE DATA (WORKING)
-    // Get all Offense Data 
+    // Get all Offense Data (WORKING)
+    // No Pagination
     getAllOffenseData: (parent, args) => {
-      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/national?api_key=${APIKEY}`)
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/national/count?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
     // Get Offense Data by Region (WORKING)
+    // No Pagination
     getOffenseDataByRegion: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/regions/${args.regionName}/count?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
     // Get Offense Data by State (WORKING)
+    // No Pagination
     getOffenseDataByState: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/states/${args.stateAbbreviation}/count?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
-    // Get all Weapons Offense Data
+    // Get all Weapons Offense Data (CONNECTION IS WORKING, BUT THE RESULTS ARRAY IS EMPTY)
+    // No Pagination
     getAllWeaponOffenseData: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/weapons/national/count?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
     // Get Weapons Offense Data by Region (WORKING)
+    // No Pagination
     getWeaponOffenseDataByRegion: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/weapons/regions/${args.regionName}/count?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
     // Get Weapons Offense Data by State (WORKING)
+    // No Pagination
     getWeaponOffenseDataByState: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/weapons/states/${args.stateAbbreviation}/count?api_key=${APIKEY}`)
       .then((response) => response.data)
