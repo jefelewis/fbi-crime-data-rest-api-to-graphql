@@ -28,6 +28,7 @@ const RESOLVERS = {
     // },
 
 
+
     // VICTIM DATA
     // Get all Victim Data (WORKING)
     getAllVictimData: (parent, args) => {
@@ -47,6 +48,7 @@ const RESOLVERS = {
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
+
 
 
     // PARTICIPATION DATA
@@ -70,25 +72,27 @@ const RESOLVERS = {
     },
 
 
-    // // OFFENSE DATA
-    // // Get all Weapons Offense Data
-    // getAllWeaponsOffenseData: (parent, args) => {
-    //   return axios.get(``)
-    //   .then((response) => response.data)
-    //   .catch((error) => console.log(error))
-    // },
-    // // Get Weapons Offense Data by Region
-    // getAllWeaponsOffenseDataByRegion: (parent, args) => {
-    //   return axios.get(``)
-    //   .then((response) => response.data)
-    //   .catch((error) => console.log(error))
-    // },
-    // // Get Weapons Offense Data by State
-    // getAllWeaponsOffenseDataByState: (parent, args) => {
-    //   return axios.get(``)
-    //   .then((response) => response.data)
-    //   .catch((error) => console.log(error))
-    // }
+
+    // OFFENSE DATA (WORKING)
+    // Get all Weapons Offense Data
+    getAllWeaponOffenseData: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/weapons/national/count?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Weapons Offense Data by Region (WORKING)
+    getWeaponOffenseDataByRegion: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/weapons/regions/${args.regionName}/count?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Weapons Offense Data by State (WORKING)
+    getWeaponOffenseDataByState: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/weapons/states/${args.stateAbbreviation}/count?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+
 
 
     // REST API VARIABLE LOOKUPS
@@ -97,6 +101,7 @@ const RESOLVERS = {
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
+
 
 
     // POLICE EMPLOYMENT (WORKING)
@@ -120,6 +125,7 @@ const RESOLVERS = {
     },
 
 
+
     // ARSON (WORKING)
     // Get All Arson Data (WORKING)
     getAllArsonData: (parent, args) => {
@@ -141,6 +147,7 @@ const RESOLVERS = {
     },
 
 
+
     // ESTIMATES (WORKING)
     // Get All Estimate Data (WORKING)
     getAllEstimateData: (parent, args) => {
@@ -159,7 +166,7 @@ const RESOLVERS = {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/estimates/states/${args.stateAbbreviation}?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
-    },
+    }
   }
 };
 
