@@ -14,16 +14,15 @@
   }
 }
 
-
 {
-  getWeaponOffenseDataByRegion(regionName: "midwest", offense: "aggravated-assault"){
+  getOffenseDataByRegion (offense: "burglary", regionName: "west"){
     uri_type
     noun
     category
     title
     short_title
-    data {
-      value
+    data{
+     	value
       data_year
       key_type
       key
