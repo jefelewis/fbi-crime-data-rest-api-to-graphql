@@ -5,20 +5,23 @@ const TYPEDEFS = `
     getAllVictimData(offense: String, variable: String): Victim
     getVictimDataByRegion(offense: String, regionName: String, variable: String): Victim
     getVictimDataByState(offense: String, stateAbbreviation: String, variable: String): Victim
-
+    
     getAllOffenderData(offense: String, variable: String): Offender
     getOffenderDataByRegion(offense: String, regionName: String, variable: String): Offender
     getOffenderDataByState(offense: String, stateAbbreviation: String, variable: String): Offender
-
+    
     getAllParticipationData: AllParticipation
     getParticipationDataByRegion(regionName: String): ParticipationByRegion
     getParticipationDataByState(stateAbbreviation: String): ParticipationByState
 
     getVariableLookupForAgencies: AgencyLookup
+    getAgencyByOri(ori: String): AgencyOri
 
     getAllOffenseData(offense: String): Offense
     getOffenseDataByRegion(offense: String, regionName: String): Offense
     getOffenseDataByState(offense: String, stateAbbreviation: String): Offense
+    getOffenseDataByAgency(ori: String): OffenseAgency
+
 
     getAllLinkedOffenseData(offense: String): LinkedOffense
     getLinkedOffenseDataByRegion(offense: String, regionName: String): LinkedOffense
@@ -31,6 +34,7 @@ const TYPEDEFS = `
     getAllPoliceEmploymentData: AllPoliceEmployment
     getPoliceEmploymentDataByRegion(regionName: String): PoliceEmploymentByRegion
     getPoliceEmploymentDataByState(stateAbbreviation: String): PoliceEmploymentByState
+    getPoliceEmploymentDataByAgency(ori: String): PoliceEmploymentByAgency
 
     getAllArsonData: AllArson
     getArsonDataByRegion(regionName: String): ArsonByRegion
@@ -137,25 +141,8 @@ const TYPEDEFS = `
     category: String
     title: String
     short_title: String
-    data: [OffenderData]
+    data: [OffenseData]
   }
-  type OffenderData {
-    value: Int
-    data_year: Int
-    key_type: String
-    key: String
-  }
-
-
-
-
-
-
-
-
-
-
-
 
   type Offense {
     uri_type: String
@@ -165,6 +152,17 @@ const TYPEDEFS = `
     short_title: String
     data: [OffenseData]
   }
+
+  type OffenseAgency {
+    results: [OffenseDataAgency]
+    pagination: Pagination
+  }
+
+  type OffenseDataAgency {
+    results: [OffenseDataAgency]
+    pagination: Pagination
+  }
+
 
   type OffenseData {
     value: Int
@@ -243,6 +241,11 @@ const TYPEDEFS = `
     pagination: Pagination
   }
 
+  type PoliceEmploymentByAgency {
+    results: [PoliceEmploymentByAgencyData]
+    pagination: Pagination
+  }
+
   type AllPoliceEmploymentData {
     data_year: Int
     civilian_ct: Int
@@ -284,6 +287,26 @@ const TYPEDEFS = `
     male_total_ct: Int
     population: Int
     total_pe_ct: Int
+    state_name: String
+    state_abb: String
+    pe_ct_per_1000: String
+  }
+
+  type PoliceEmploymentByAgencyData {
+    data_year: Int
+    civilian_ct: Int
+    female_civilian_ct: Int
+    female_officer_ct: Int
+    female_total_ct: Int
+    male_civilian_ct: Int
+    male_officer_ct: Int
+    male_total_ct: Int
+    population: Int
+    total_pe_ct: Int
+    ori: String
+    ncic_agency_name: String
+    agency_name_edit: String
+    agency_type_name: String  
     state_name: String
     state_abb: String
     pe_ct_per_1000: String
@@ -419,6 +442,25 @@ const TYPEDEFS = `
     motor_vehicle_theft: Int
     arson: Int
   }
+
+  type AgencyOri {
+    ori: String
+    agency_name: String
+    agency_type_name: String
+    state_name: String
+    state_abbr: String
+    division_name: String
+    region_name: String
+    region_desc: String
+    county_name: String
+    nibrs: Boolean
+    latitude: String
+    longitude: String
+  }
+
+
+
+
 `;
 
 

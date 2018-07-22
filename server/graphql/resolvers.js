@@ -66,7 +66,6 @@ const RESOLVERS = {
     },
 
 
-
     // PARTICIPATION DATA
     // Get all Participation Data (WORKING)
     // No Pagination
@@ -111,6 +110,13 @@ const RESOLVERS = {
     // No Pagination
     getOffenseDataByState: (parent, args) => {
       return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/states/${args.stateAbbreviation}/count?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
+    // Get Offense Data by Agency (WORKING)
+    // Note: Paginated
+    getOffenseDataByAgency: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/summarized/agencies/${args.ori}/offenses?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
@@ -165,6 +171,11 @@ const RESOLVERS = {
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
+    getAgencyByOri: (parent, args) => {
+      return axios.get(`hhttps://api.usa.gov/crime/fbi/sapi/api/agencies/${args.ori}?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
 
 
 
@@ -187,7 +198,12 @@ const RESOLVERS = {
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
-
+    // Get Police Employment Data by Agency (WORKING)
+    getPoliceEmploymentDataByAgency: (parent, args) => {
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/police-employment/agencies/${args.ori}?api_key=${APIKEY}`)
+      .then((response) => response.data)
+      .catch((error) => console.log(error))
+    },
 
 
     // ARSON (WORKING)
