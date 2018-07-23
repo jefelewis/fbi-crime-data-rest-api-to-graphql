@@ -8,6 +8,8 @@ If you'd like to contribute to this project, please fork this repository over an
 *  [Using the GraphQL API](#using-the-graphql-api)
 *  [Testing the API Endpoints](#testing-the-api-endpoints)
 *  [API Data: Victim Data](#api-data-victim-data)
+*  [API Data: Offender Data](#api-data-offender-data)
+*  [API Data: Participation Data](#api-data-participation-data)
 *  [Example GraphQL Queries](#example-graphql-queries)
 
 ## About the Data
