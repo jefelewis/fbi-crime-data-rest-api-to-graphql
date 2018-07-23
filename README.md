@@ -18,9 +18,9 @@ If you'd like to contribute to this project, please fork this repository over an
 *  [API Data: Police Employment Data](#api-data-police-employment-data)
 *  [API Data: Arson Data](#api-data-arson-data)
 *  [API Data: Estimate Data](#api-data-estimate-data)
-*  [GraphQL Example Query #1: Number of all Burglary Victims (Annually)](#graphql-example-query-#1-number-of-all-burglary-victims-annually)
-*  [GraphQL Example Query #2](#graphql-example-query-#2)
-*  [GraphQL Example Query #3](#graphql-example-query-#3)
+*  [GraphQL Example Query: Number of all Burglary Victims (Annually)](#graphql-example-query-number-of-all-burglary-victims-annually)
+*  [GraphQL Example Query](#graphql-example-query-)
+*  [GraphQL Example Query](#graphql-example-query)
 
 
 ## About the Data
@@ -197,7 +197,7 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
 *  State Abbreviation (Note: Some states don't provide data)
 
 
-## GraphQL Query #1 Number of all Burglary Victims (Annually)
+## GraphQL Query: Number of all Burglary Victims (Annually)
 **Query:**
 
     {
