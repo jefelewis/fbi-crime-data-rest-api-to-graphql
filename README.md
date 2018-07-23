@@ -19,12 +19,12 @@ If you'd like to contribute to this project, please fork this repository over an
 *  [API Data: Police Employment Data](#api-data-police-employment-data)
 *  [API Data: Arson Data](#api-data-arson-data)
 *  [API Data: Estimate Data](#api-data-estimate-data)
-*  [GraphQL Example Query: Number of all Burglary Victims in the United States Annually](#graphql-example-query-number-of-all-burglary-victims-in-the-united-states-annually)
-*  [GraphQL Example Query: Retrieve Agency by Originating Agency Identification (ORI)](#graphql-example-query:-retrieve-agency-by-orginating-agency-identification-ori)
-*  [GraphQL Example Query: Number of Homicide Victims in Arizona by Age Range Annually](#graphql-example-query:-number-of-homicide-victims-in-arizona-by-age-range-annually)
+*  [Example Query: Number of all Burglary Victims in the United States Annually](#example-query-number-of-all-burglary-victims-in-the-united-states-annually)
+*  [Example Query: Retrieve Agency by Originating Agency Identification (ORI)](#example-query:-retrieve-agency-by-orginating-agency-identification-ori)
+*  [Example Query: Number of Homicide Victims in Arizona by Age Range Annually](#example-query:-number-of-homicide-victims-in-arizona-by-age-range-annually)
 
 ## About Operation Refactor America
-Operation Refactor America's goal is to empower citizens with transparent data. However, not all government agencies provide public APIs and the agencies with public APIs are poorly documented and archaic REST APIs. Our mission is to retreive that valuable data and convert them into a modern and easy to use API using GraphQL.
+Operation Refactor America's goal is to empower citizens with transparent data. However, not all government agencies provide public APIs and the agencies that do provide public APIs, are poorly documented and build on archaic REST architecture. Our mission is to retreive that valuable data and convert them into a modern and easy to use API using GraphQL.
 
 ## About the Data
 The data comes directly from the Federal Bureau of Investigation's REST API. A summary of endpoints and documentation can be found here: https://crime-data-explorer.fr.cloud.gov/api
@@ -200,7 +200,7 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
 *  State Abbreviation (Note: Some states don't provide data)
 
 
-## GraphQL Example Query: Number of all Burglary Victims Annually
+## Example Query: Number of all Burglary Victims Annually
 **Query:**
 
     {
@@ -365,7 +365,7 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
       }
     }
 
-## GraphQL Example Query: Retrieve Agency by Originating Agency Identification (ORI)
+## Example Query: Retrieve Agency by Originating Agency Identification (ORI)
 **Query:**
 
     {
@@ -407,7 +407,7 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
     }    
 
 
-## GraphQL Example Query: Number of Homicide Victims in Arizona by Age Range Annually
+## Example Query: Number of Homicide Victims in Arizona by Age Range Annually
 **Query:**
 
     {
