@@ -5,6 +5,7 @@ If you'd like to contribute to this project, please fork this repository over an
 
 ## On This Page
 *  [About the Data](#about-the-data)
+*  [About GraphQL Packages Used](#about-graphql-packages-used)
 *  [Using the GraphQL API](#using-the-graphql-api)
 *  [Testing the API Endpoints](#testing-the-api-endpoints)
 *  [API Data: Victim Data](#api-data-victim-data)
@@ -20,6 +21,9 @@ If you'd like to contribute to this project, please fork this repository over an
 
 ## About the Data
 The data comes directly from the Federal Bureau of Investigation's REST API. A summary of endpoints and documentation can be found here: https://crime-data-explorer.fr.cloud.gov/api
+
+## About GraphQL Packages Used
+*  **GraphQL Server:** Apollo Server
 
 ## Using the GraphQL API
 npm run server
@@ -354,6 +358,7 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
 
 ### Example #2: Number of all Burglary Victims in the Midwest Region (Annually)
 **Query:**
+
     {
       getVictimDataByRegion(regionName:"midwest", offense: "burglary", variable: "count") {
         noun
@@ -374,6 +379,7 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
 
 ### Example #3: Number of all Burglary Victims in the state of Texas (Annually)
 **Query:**
+
     {
       getVictimDataByState(stateAbbreviation:"tx", offense: "burglary", variable: "count") {
         noun
@@ -390,6 +396,7 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
     }
 
 **GraphQL Result:**
+
     {
       "data": {
         "getVictimDataByState": {
