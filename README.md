@@ -22,10 +22,6 @@ If you'd like to contribute to this project, please fork this repository over an
 *  [Example Query: Number of all Burglary Victims in the United States Annually](#example-query-number-of-all-burglary-victims-in-the-united-states-annually)
 *  [Example Query: Retrieve Agency by Originating Agency Identification](#example-query-retrieve-agency-by-originating-agency-identification)
 *  [Example Query: Number of Homicide Victims in Arizona by Age Range Annually](#example-query-number-of-homicide-victims-in-arizona-by-age-range-annually)
-Example Query: Retrieve Agency by Originating Agency Identification
-
-
-
 
 ## About Operation Refactor America
 Operation Refactor America's goal is to empower citizens with transparent data. However, not all government agencies provide public APIs and the agencies that do provide public APIs, are poorly documented, build on archaic REST architecture, and contain scattered data. Our mission is to retreive that valuable data and convert them into an intuitive and modern API using GraphQL.
