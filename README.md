@@ -32,9 +32,9 @@ npm jest
 Note: Victim Data **requires one selection for each of the three categories**:
 
 **Category #1 (Geographic Level):**
-*  United States (No argument required since there's only one country)
-*  Region
-*  State
+*  United States (Note: No GraphQL argument required since there's only one country)
+*  Region (Northeast, West, South, Midwest)
+*  State Abbreviation (Note: Some states don't provide data)
 
 **Category #2 (Offense):**
 *  Aggravated-Assualt
@@ -62,9 +62,9 @@ Note: Victim Data **requires one selection for each of the three categories**:
 Note: Offender Data **requires one selection for each of the three categories**:
 
 **Category #1 (Geographic Level):**
-*  United States (No argument required since there's only one country)
-*  Region
-*  State
+*  United States (Note: No GraphQL argument required since there's only one country)
+*  Region (Northeast, West, South, Midwest)
+*  State Abbreviation (Note: Some states don't provide data)
 
 **Category #2 (Offense):**
 *  Aggravated-Assualt
@@ -92,9 +92,9 @@ Note: Offender Data **requires one selection for each of the three categories**:
 Note: Participation Data **requires ONE selection for ONE category**:
 
 **Category #1 (Geographic Level):**
-*  United States (No argument required since there's only one country)
-*  Region
-*  State
+*  United States (Note: No GraphQL argument required since there's only one country)
+*  Region (Northeast, West, South, Midwest)
+*  State Abbreviation (Note: Some states don't provide data)
 
 
 
@@ -102,9 +102,9 @@ Note: Participation Data **requires ONE selection for ONE category**:
 Note: Offense Data **requires ONE selection for the ONE category.** The API only returns Offense data using the count variable, so category #3 is not needed.
 
 **Category #1 (Geographic Level) (NOT REQUIRED FOR AGENCY):**
-*  United States (No argument required since there's only one country)
-*  Region
-*  State
+*  United States (Note: No GraphQL argument required since there's only one country)
+*  Region (Northeast, West, South, Midwest)
+*  State Abbreviation (Note: Some states don't provide data)
 
 **Category #2 (Originating Agency Identification) (ONLY REQUIRED FOR AGENCY):**
 *  Ori (These can be found when running)
@@ -115,9 +115,9 @@ Note: Offense Data **requires ONE selection for the ONE category.** The API only
 Note: Linked Offense Data **requires ONE selection for each of the TWO categories.** The API only returns Linked Offense data using the count variable, so category #3 is not needed.
 
 **Category #1 (Geographic Level):**
-*  United States (No argument required since there's only one country)
-*  Region
-*  State
+*  United States (Note: No GraphQL argument required since there's only one country)
+*  Region (Northeast, West, South, Midwest)
+*  State Abbreviation (Note: Some states don't provide data)
 
 **Category #2 (Offense):**
 *  Aggravated-Assualt
@@ -137,9 +137,9 @@ Note: Linked Offense Data **requires ONE selection for each of the TWO categorie
 Note: Weapons Offense Data **requires ONE selection for each of the TWO categories.** The API only returns Weapons Offense data using the count variable, so category #3 is not needed.
 
 **Category #1 (Geographic Level):**
-*  United States (No argument required since there's only one country)
-*  Region
-*  State
+*  United States (Note: No GraphQL argument required since there's only one country)
+*  Region (Northeast, West, South, Midwest)
+*  State Abbreviation (Note: Some states don't provide data)
 
 **Category #2 (Offense):**
 *  Aggravated-Assualt
@@ -159,9 +159,9 @@ Note: Weapons Offense Data **requires ONE selection for each of the TWO categori
 Note: Police Employment Data **requires ONE selection for the ONE category.**
 
 **Category #1 (Geographic Level):**
-*  United States (No argument required since there's only one country)
-*  Region
-*  State
+*  United States (Note: No GraphQL argument required since there's only one country)
+*  Region (Northeast, West, South, Midwest)
+*  State Abbreviation (Note: Some states don't provide data)
 
 **Category #2 (Originating Agency Identification) (ONLY REQUIRED FOR AGENCY):**
 *  Ori (These can be found when running)
@@ -172,9 +172,9 @@ Note: Police Employment Data **requires ONE selection for the ONE category.**
 Note: Arson Data **requires ONE selection for the ONE category.**
 
 **Category #1 (Geographic Level):**
-*  United States (No argument required since there's only one country)
-*  Region
-*  State
+*  United States (Note: No GraphQL argument required since there's only one country)
+*  Region (Northeast, West, South, Midwest)
+*  State Abbreviation (Note: Some states don't provide data)
 
 
 
@@ -182,26 +182,57 @@ Note: Arson Data **requires ONE selection for the ONE category.**
 Note: Estimate Data **requires ONE selection for the ONE category.**
 
 **Category #1 (Geographic Level):**
-*  United States (No argument required since there's only one country)
-*  Region
-*  State
+*  United States (Note: No GraphQL argument required since there's only one country)
+*  Region (Northeast, West, South, Midwest)
+*  State Abbreviation (Note: Some states don't provide data)
 
-
-
-## API Data Model
-*   **Id** - A unique identifier for each directory record
-*   **Name** – The name of the corporation.
-*   **Description** – Any notes about contacting the corporation.
-*   **Subdivision** – Used for mailing letters to the corporation..
-*   **Street1** – A first line of address information (such as the street address) for contacting the corporation.
-*   **Street2** – A second line of address information for contacting the corporation.
-*   **City** – The city of the corporation's mailing address.
-*   **StateTer** – The state of the corporation's mailing address.
-*   **Zip** – The postal zip code of the corporation's mailing address.
-*   **Email** – The e-mail address for contacting the corporation.
-*   **Phone** – The phone number to be used when contacting the corporation (may contain more than one).
-*   **TTY** – The TTY number to be used when contacting the corporation (may contain more than one).
-*   **Tollfree** – The toll-free number to be used when contacting the corporation (may contain more than one).
-*   **URI** – The URL to access the corporation’s complete directory record via the API.
 
 ## Example GraphQL Queries
+### Example Query: Number of all Burglary Victims (Annually)
+{
+  getAllVictimData(offense: "burglary", variable: "count") {
+    noun
+    ui_type
+    title
+    short_title
+    data {
+      value
+      data_year
+      key_type
+      key
+    }
+  }
+}
+
+### Example Query: Number of all Burglary Victims in the Midwest Region (Annually)
+{
+  getVictimDataByRegion(regionName:"midwest", offense: "burglary", variable: "count") {
+    noun
+    ui_type
+    title
+    short_title
+    data {
+      value
+      data_year
+      key_type
+      key
+    }
+  }
+}
+
+
+### Example Query: Number of all Burglary Victims in the state of Texas (Annually)
+{
+  getVictimDataByState(stateAbbreviation:"tx", offense: "burglary", variable: "count") {
+    noun
+    ui_type
+    title
+    short_title
+    data {
+      value
+      data_year
+      key_type
+      key
+    }
+  }
+}
