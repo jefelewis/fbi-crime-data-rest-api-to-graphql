@@ -205,14 +205,10 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
 
     {
       getAllVictimData(offense: "burglary", variable: "count") {
-        noun
-        ui_type
         title
-        short_title
         data {
           value
           data_year
-          key_type
           key
         }
       }
@@ -223,141 +219,116 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
     {
       "data": {
         "getAllVictimData": {
-          "noun": null,
-          "ui_type": "text",
           "title": "Victim Count",
-          "short_title": null,
           "data": [
             {
               "value": 1301920,
               "data_year": 2006,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 1635462,
               "data_year": 2007,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 1992726,
               "data_year": 2008,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 2165776,
               "data_year": 2009,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 2025232,
               "data_year": 2010,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 2205040,
               "data_year": 2011,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 2147740,
               "data_year": 2012,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 1857727,
               "data_year": 2013,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 1474746,
               "data_year": 2014,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 1712404,
               "data_year": 2015,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 1164996,
               "data_year": 2016,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 64854,
               "data_year": 2003,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 109620,
               "data_year": 2004,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 84105,
               "data_year": 2005,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 12976,
               "data_year": 2002,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 2023704,
               "data_year": 2001,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 437166,
               "data_year": 2000,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 2411,
               "data_year": 1999,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 1352000,
               "data_year": 1997,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 1920850,
               "data_year": 1998,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 23368,
               "data_year": 1995,
-              "key_type": null,
               "key": "Count"
             },
             {
               "value": 14760,
               "data_year": 1996,
-              "key_type": null,
               "key": "Count"
             }
           ]
@@ -412,14 +383,10 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
 
     {
       getVictimDataByState(stateAbbreviation:"az", offense: "homicide", variable: "age") {
-        noun
-        ui_type
         title
-        short_title
         data {
           value
           data_year
-          key_type
           key
         }
       }
@@ -430,801 +397,666 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
     {
       "data": {
         "getVictimDataByState": {
-          "noun": "Victim",
-          "ui_type": "basic_table",
           "title": "Victim Age",
-          "short_title": "Age",
           "data": [
             {
               "value": 0,
               "data_year": 2005,
-              "key_type": null,
               "key": "0-9"
             },
             {
               "value": 0,
               "data_year": 2006,
-              "key_type": null,
               "key": "0-9"
             },
             {
               "value": 1,
               "data_year": 2007,
-              "key_type": null,
               "key": "0-9"
             },
             {
               "value": 1,
               "data_year": 2008,
-              "key_type": null,
               "key": "0-9"
             },
             {
               "value": 2,
               "data_year": 2009,
-              "key_type": null,
               "key": "0-9"
             },
             {
               "value": 1,
               "data_year": 2010,
-              "key_type": null,
               "key": "0-9"
             },
             {
               "value": 1,
               "data_year": 2011,
-              "key_type": null,
               "key": "0-9"
             },
             {
               "value": 1,
               "data_year": 2012,
-              "key_type": null,
               "key": "0-9"
             },
             {
               "value": 4,
               "data_year": 2013,
-              "key_type": null,
               "key": "0-9"
             },
             {
               "value": 4,
               "data_year": 2014,
-              "key_type": null,
               "key": "0-9"
             },
             {
               "value": 0,
               "data_year": 2015,
-              "key_type": null,
               "key": "0-9"
             },
             {
               "value": 1,
               "data_year": 2016,
-              "key_type": null,
               "key": "0-9"
             },
             {
               "value": 0,
               "data_year": 2005,
-              "key_type": null,
               "key": "10-19"
             },
             {
               "value": 0,
               "data_year": 2006,
-              "key_type": null,
               "key": "10-19"
             },
             {
               "value": 0,
               "data_year": 2007,
-              "key_type": null,
               "key": "10-19"
             },
             {
               "value": 1,
               "data_year": 2008,
-              "key_type": null,
               "key": "10-19"
             },
             {
               "value": 0,
               "data_year": 2009,
-              "key_type": null,
               "key": "10-19"
             },
             {
               "value": 0,
               "data_year": 2010,
-              "key_type": null,
               "key": "10-19"
             },
             {
               "value": 1,
               "data_year": 2011,
-              "key_type": null,
               "key": "10-19"
             },
             {
               "value": 1,
               "data_year": 2012,
-              "key_type": null,
               "key": "10-19"
             },
             {
               "value": 3,
               "data_year": 2013,
-              "key_type": null,
               "key": "10-19"
             },
             {
               "value": 0,
               "data_year": 2014,
-              "key_type": null,
               "key": "10-19"
             },
             {
               "value": 2,
               "data_year": 2015,
-              "key_type": null,
               "key": "10-19"
             },
             {
               "value": 1,
               "data_year": 2016,
-              "key_type": null,
               "key": "10-19"
             },
             {
               "value": 0,
               "data_year": 2005,
-              "key_type": null,
               "key": "20-29"
             },
             {
               "value": 0,
               "data_year": 2006,
-              "key_type": null,
               "key": "20-29"
             },
             {
               "value": 5,
               "data_year": 2007,
-              "key_type": null,
               "key": "20-29"
             },
             {
               "value": 1,
               "data_year": 2008,
-              "key_type": null,
               "key": "20-29"
             },
             {
               "value": 4,
               "data_year": 2009,
-              "key_type": null,
               "key": "20-29"
             },
             {
               "value": 3,
               "data_year": 2010,
-              "key_type": null,
               "key": "20-29"
             },
             {
               "value": 2,
               "data_year": 2011,
-              "key_type": null,
               "key": "20-29"
             },
             {
               "value": 2,
               "data_year": 2012,
-              "key_type": null,
               "key": "20-29"
             },
             {
               "value": 3,
               "data_year": 2013,
-              "key_type": null,
               "key": "20-29"
             },
             {
               "value": 1,
               "data_year": 2014,
-              "key_type": null,
               "key": "20-29"
             },
             {
               "value": 4,
               "data_year": 2015,
-              "key_type": null,
               "key": "20-29"
             },
             {
               "value": 2,
               "data_year": 2016,
-              "key_type": null,
               "key": "20-29"
             },
             {
               "value": 1,
               "data_year": 2005,
-              "key_type": null,
               "key": "30-39"
             },
             {
               "value": 1,
               "data_year": 2006,
-              "key_type": null,
               "key": "30-39"
             },
             {
               "value": 1,
               "data_year": 2007,
-              "key_type": null,
               "key": "30-39"
             },
             {
               "value": 1,
               "data_year": 2008,
-              "key_type": null,
               "key": "30-39"
             },
             {
               "value": 2,
               "data_year": 2009,
-              "key_type": null,
               "key": "30-39"
             },
             {
               "value": 5,
               "data_year": 2010,
-              "key_type": null,
               "key": "30-39"
             },
             {
               "value": 0,
               "data_year": 2011,
-              "key_type": null,
               "key": "30-39"
             },
             {
               "value": 1,
               "data_year": 2012,
-              "key_type": null,
               "key": "30-39"
             },
             {
               "value": 0,
               "data_year": 2013,
-              "key_type": null,
               "key": "30-39"
             },
             {
               "value": 1,
               "data_year": 2014,
-              "key_type": null,
               "key": "30-39"
             },
             {
               "value": 0,
               "data_year": 2015,
-              "key_type": null,
               "key": "30-39"
             },
             {
               "value": 3,
               "data_year": 2016,
-              "key_type": null,
               "key": "30-39"
             },
             {
               "value": 1,
               "data_year": 2005,
-              "key_type": null,
               "key": "40-49"
             },
             {
               "value": 0,
               "data_year": 2006,
-              "key_type": null,
               "key": "40-49"
             },
             {
               "value": 2,
               "data_year": 2007,
-              "key_type": null,
               "key": "40-49"
             },
             {
               "value": 0,
               "data_year": 2008,
-              "key_type": null,
               "key": "40-49"
             },
             {
               "value": 2,
               "data_year": 2009,
-              "key_type": null,
               "key": "40-49"
             },
             {
               "value": 0,
               "data_year": 2010,
-              "key_type": null,
               "key": "40-49"
             },
             {
               "value": 3,
               "data_year": 2011,
-              "key_type": null,
               "key": "40-49"
             },
             {
               "value": 3,
               "data_year": 2012,
-              "key_type": null,
               "key": "40-49"
             },
             {
               "value": 1,
               "data_year": 2013,
-              "key_type": null,
               "key": "40-49"
             },
             {
               "value": 3,
               "data_year": 2014,
-              "key_type": null,
               "key": "40-49"
             },
             {
               "value": 1,
               "data_year": 2015,
-              "key_type": null,
               "key": "40-49"
             },
             {
               "value": 1,
               "data_year": 2016,
-              "key_type": null,
               "key": "40-49"
             },
             {
               "value": 0,
               "data_year": 2005,
-              "key_type": null,
               "key": "50-59"
             },
             {
               "value": 0,
               "data_year": 2006,
-              "key_type": null,
               "key": "50-59"
             },
             {
               "value": 0,
               "data_year": 2007,
-              "key_type": null,
               "key": "50-59"
             },
             {
               "value": 0,
               "data_year": 2008,
-              "key_type": null,
               "key": "50-59"
             },
             {
               "value": 0,
               "data_year": 2009,
-              "key_type": null,
               "key": "50-59"
             },
             {
               "value": 1,
               "data_year": 2010,
-              "key_type": null,
               "key": "50-59"
             },
             {
               "value": 3,
               "data_year": 2011,
-              "key_type": null,
               "key": "50-59"
             },
             {
               "value": 0,
               "data_year": 2012,
-              "key_type": null,
               "key": "50-59"
             },
             {
               "value": 1,
               "data_year": 2013,
-              "key_type": null,
               "key": "50-59"
             },
             {
               "value": 0,
               "data_year": 2014,
-              "key_type": null,
               "key": "50-59"
             },
             {
               "value": 0,
               "data_year": 2015,
-              "key_type": null,
               "key": "50-59"
             },
             {
               "value": 1,
               "data_year": 2016,
-              "key_type": null,
               "key": "50-59"
             },
             {
               "value": 0,
               "data_year": 2005,
-              "key_type": null,
               "key": "60-69"
             },
             {
               "value": 1,
               "data_year": 2006,
-              "key_type": null,
               "key": "60-69"
             },
             {
               "value": 1,
               "data_year": 2007,
-              "key_type": null,
               "key": "60-69"
             },
             {
               "value": 0,
               "data_year": 2008,
-              "key_type": null,
               "key": "60-69"
             },
             {
               "value": 0,
               "data_year": 2009,
-              "key_type": null,
               "key": "60-69"
             },
             {
               "value": 0,
               "data_year": 2010,
-              "key_type": null,
               "key": "60-69"
             },
             {
               "value": 2,
               "data_year": 2011,
-              "key_type": null,
               "key": "60-69"
             },
             {
               "value": 1,
               "data_year": 2012,
-              "key_type": null,
               "key": "60-69"
             },
             {
               "value": 1,
               "data_year": 2013,
-              "key_type": null,
               "key": "60-69"
             },
             {
               "value": 0,
               "data_year": 2014,
-              "key_type": null,
               "key": "60-69"
             },
             {
               "value": 3,
               "data_year": 2015,
-              "key_type": null,
               "key": "60-69"
             },
             {
               "value": 1,
               "data_year": 2016,
-              "key_type": null,
               "key": "60-69"
             },
             {
               "value": 0,
               "data_year": 2005,
-              "key_type": null,
               "key": "70-79"
             },
             {
               "value": 0,
               "data_year": 2006,
-              "key_type": null,
               "key": "70-79"
             },
             {
               "value": 0,
               "data_year": 2007,
-              "key_type": null,
               "key": "70-79"
             },
             {
               "value": 0,
               "data_year": 2008,
-              "key_type": null,
               "key": "70-79"
             },
             {
               "value": 0,
               "data_year": 2009,
-              "key_type": null,
               "key": "70-79"
             },
             {
               "value": 0,
               "data_year": 2010,
-              "key_type": null,
               "key": "70-79"
             },
             {
               "value": 2,
               "data_year": 2011,
-              "key_type": null,
               "key": "70-79"
             },
             {
               "value": 0,
               "data_year": 2012,
-              "key_type": null,
               "key": "70-79"
             },
             {
               "value": 0,
               "data_year": 2013,
-              "key_type": null,
               "key": "70-79"
             },
             {
               "value": 0,
               "data_year": 2014,
-              "key_type": null,
               "key": "70-79"
             },
             {
               "value": 0,
               "data_year": 2015,
-              "key_type": null,
               "key": "70-79"
             },
             {
               "value": 0,
               "data_year": 2016,
-              "key_type": null,
               "key": "70-79"
             },
             {
               "value": 0,
               "data_year": 2005,
-              "key_type": null,
               "key": "80-89"
             },
             {
               "value": 0,
               "data_year": 2006,
-              "key_type": null,
               "key": "80-89"
             },
             {
               "value": 0,
               "data_year": 2007,
-              "key_type": null,
               "key": "80-89"
             },
             {
               "value": 0,
               "data_year": 2008,
-              "key_type": null,
               "key": "80-89"
             },
             {
               "value": 0,
               "data_year": 2009,
-              "key_type": null,
               "key": "80-89"
             },
             {
               "value": 0,
               "data_year": 2010,
-              "key_type": null,
               "key": "80-89"
             },
             {
               "value": 0,
               "data_year": 2011,
-              "key_type": null,
               "key": "80-89"
             },
             {
               "value": 0,
               "data_year": 2012,
-              "key_type": null,
               "key": "80-89"
             },
             {
               "value": 0,
               "data_year": 2013,
-              "key_type": null,
               "key": "80-89"
             },
             {
               "value": 0,
               "data_year": 2014,
-              "key_type": null,
               "key": "80-89"
             },
             {
               "value": 0,
               "data_year": 2015,
-              "key_type": null,
               "key": "80-89"
             },
             {
               "value": 1,
               "data_year": 2016,
-              "key_type": null,
               "key": "80-89"
             },
             {
               "value": 0,
               "data_year": 2005,
-              "key_type": null,
               "key": "90-99"
             },
             {
               "value": 0,
               "data_year": 2006,
-              "key_type": null,
               "key": "90-99"
             },
             {
               "value": 0,
               "data_year": 2007,
-              "key_type": null,
               "key": "90-99"
             },
             {
               "value": 0,
               "data_year": 2008,
-              "key_type": null,
               "key": "90-99"
             },
             {
               "value": 0,
               "data_year": 2009,
-              "key_type": null,
               "key": "90-99"
             },
             {
               "value": 0,
               "data_year": 2010,
-              "key_type": null,
               "key": "90-99"
             },
             {
               "value": 0,
               "data_year": 2011,
-              "key_type": null,
               "key": "90-99"
             },
             {
               "value": 0,
               "data_year": 2012,
-              "key_type": null,
               "key": "90-99"
             },
             {
               "value": 0,
               "data_year": 2013,
-              "key_type": null,
               "key": "90-99"
             },
             {
               "value": 0,
               "data_year": 2014,
-              "key_type": null,
               "key": "90-99"
             },
             {
               "value": 0,
               "data_year": 2015,
-              "key_type": null,
               "key": "90-99"
             },
             {
               "value": 0,
               "data_year": 2016,
-              "key_type": null,
               "key": "90-99"
             },
             {
               "value": 0,
               "data_year": 2005,
-              "key_type": null,
               "key": "Unknown"
             },
             {
               "value": 0,
               "data_year": 2006,
-              "key_type": null,
               "key": "Unknown"
             },
             {
               "value": 0,
               "data_year": 2007,
-              "key_type": null,
               "key": "Unknown"
             },
             {
               "value": 0,
               "data_year": 2008,
-              "key_type": null,
               "key": "Unknown"
             },
             {
               "value": 0,
               "data_year": 2009,
-              "key_type": null,
               "key": "Unknown"
             },
             {
               "value": 1,
               "data_year": 2010,
-              "key_type": null,
               "key": "Unknown"
             },
             {
               "value": 0,
               "data_year": 2011,
-              "key_type": null,
               "key": "Unknown"
             },
             {
               "value": 0,
               "data_year": 2012,
-              "key_type": null,
               "key": "Unknown"
             },
             {
               "value": 0,
               "data_year": 2013,
-              "key_type": null,
               "key": "Unknown"
             },
             {
               "value": 1,
               "data_year": 2014,
-              "key_type": null,
               "key": "Unknown"
             },
             {
               "value": 0,
               "data_year": 2015,
-              "key_type": null,
               "key": "Unknown"
             },
             {
               "value": 0,
               "data_year": 2016,
-              "key_type": null,
               "key": "Unknown"
             }
           ]
