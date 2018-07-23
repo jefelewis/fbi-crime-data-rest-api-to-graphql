@@ -11,7 +11,7 @@ If you'd like to contribute to this project, please fork this repository over an
 *  [Example GraphQL Queries](#example-graphql-queries)
 
 ## About the Data
-The data comes direction from the Federal Bureau of Investigation's REST API. A summary of endpoints and documentation can be found here: https://crime-data-explorer.fr.cloud.gov/api
+The data comes directly from the Federal Bureau of Investigation's REST API. A summary of endpoints and documentation can be found here: https://crime-data-explorer.fr.cloud.gov/api
 
 ## Using the GraphQL API
 npm run server
@@ -48,7 +48,7 @@ Note: Victim Data **requires one selection for each of the three categories**:
 *  Sex
 *  Relationship
 
-## API Data: Offense Data
+## API Data: Offender Data
 Note: Offender Data **requires one selection for each of the three categories**:
 
 **Category #1 (Geographic Level):**
@@ -77,7 +77,7 @@ Note: Offender Data **requires one selection for each of the three categories**:
 *  Relationship
 
 ## API Data: Participation Data
-Note: Offender Data **requires one selection for one category**:
+Note: Participation Data **requires one selection for one category**:
 
 **Category #1 (Geographic Level):**
 *  United States (No argument required since there's only one country)
