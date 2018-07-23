@@ -8,7 +8,7 @@ If you'd like to contribute to this project, please fork this repository over an
 *  [GraphQL Server: Apollo Server](#graphql-server-apollo-server)
 *  [GraphQL Server: Start](#graphql-server-start)
 *  [GraphQL Server: Query](#graphql-server-query)
-*  [GraphQL Server: Testing API Endpoints](#graphql-server-testing-the-api-endpoints)
+*  [GraphQL Server: Testing API Endpoints](#graphql-server-testing-api-endpoints)
 *  [API Data: Victim Data](#api-data-victim-data)
 *  [API Data: Offender Data](#api-data-offender-data)
 *  [API Data: Participation Data](#api-data-participation-data)
