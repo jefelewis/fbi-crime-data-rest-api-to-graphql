@@ -403,7 +403,7 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
     }    
 
 
-### Example #3: Number of all Homicide Victims in the Arizona (Annually)
+### Example #3: Number of all Homicide Victims in the Arizona by Age Range (Annually)
 **Query:**
 
     {
