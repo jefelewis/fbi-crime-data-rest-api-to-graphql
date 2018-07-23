@@ -8,19 +8,19 @@ If you'd like to contribute to this project, please fork this repository over an
 *  [About the Data](#about-the-data)
 *  [Using the GraphQL API](#using-the-graphql-api)
 *  [Testing the API Endpoints](#testing-the-api-endpoints)
-*  [API Data: Victim Data](#api-data:-victim-data)
+*  [API Data: Victim Data](#api-data-victim-data)
 *  [Example GraphQL Queries](#example-graphql-queries)
 
 
 ## API Data: Victim Data
-Victim Data requires a selection for each three categories:
+Victim Data **requires one selection for each of the three categories**:
 
-#### Category #1 (Geographic Level):
+**Category #1 (Geographic Level):**
 *  United States
 *  Region
 *  State
 
-#### Category #2 (Offense):
+**Category #2 (Offense):**
 *  Aggravated-Assualt
 *  Arson
 *  Burglary
@@ -32,7 +32,7 @@ Victim Data requires a selection for each three categories:
 *  Robbery
 *  Violent-Crime
 
-#### Category #3 (Variable):
+**Category #3 (Variable):**
 *  Age
 *  Count
 *  Ethnicity
