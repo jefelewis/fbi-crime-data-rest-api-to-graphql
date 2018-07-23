@@ -4,19 +4,27 @@ Operation Refactor America's wrapped Federal Bureau of Investigation (FBI) Crime
 If you'd like to contribute to this project, please fork this repository over and submit a pull request.
 
 ## On This Page
-*  [About the GraphQL API](#about-the-api)
 *  [About the Data](#about-the-data)
 *  [Using the GraphQL API](#using-the-graphql-api)
 *  [Testing the API Endpoints](#testing-the-api-endpoints)
 *  [API Data: Victim Data](#api-data-victim-data)
 *  [Example GraphQL Queries](#example-graphql-queries)
 
+## About the Data
+The data comes direction from the Federal Bureau of Investigation's REST API. A summary of endpoints and documentation can be found here: https://crime-data-explorer.fr.cloud.gov/api
+
+## Using the GraphQL API
+npm run server
+http://localhost:4000/graphiql
+
+## Testing the API Endpoints
+npm jest
 
 ## API Data: Victim Data
-Victim Data **requires one selection for each of the three categories**:
+Note: Victim Data **requires one selection for each of the three categories**:
 
 **Category #1 (Geographic Level):**
-*  United States
+*  United States (No argument required since there's only one country)
 *  Region
 *  State
 
@@ -40,18 +48,41 @@ Victim Data **requires one selection for each of the three categories**:
 *  Sex
 *  Relationship
 
+## API Data: Offense Data
+Note: Offender Data **requires one selection for each of the three categories**:
 
-## About the Data
-The data comes direction from the Federal Bureau of Investigation's REST API. A summary of endpoints and documentation can be found here: https://crime-data-explorer.fr.cloud.gov/api
+**Category #1 (Geographic Level):**
+*  United States (No argument required since there's only one country)
+*  Region
+*  State
 
+**Category #2 (Offense):**
+*  Aggravated-Assualt
+*  Arson
+*  Burglary
+*  Homicide
+*  Larceny
+*  Motor-Vehicle-Theft
+*  Property-Crime
+*  Rape
+*  Robbery
+*  Violent-Crime
 
-## Using the GraphQL API
-npm run server
-http://localhost:4000/graphiql
+**Category #3 (Variable):**
+*  Age
+*  Count
+*  Ethnicity
+*  Race
+*  Sex
+*  Relationship
 
+## API Data: Participation Data
+Note: Offender Data **requires one selection for one category**:
 
-## Testing the API Endpoints
-npm jest
+**Category #1 (Geographic Level):**
+*  United States (No argument required since there's only one country)
+*  Region
+*  State
 
 
 ## API Data Model
