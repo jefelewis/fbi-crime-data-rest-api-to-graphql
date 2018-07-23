@@ -20,7 +20,7 @@ If you'd like to contribute to this project, please fork this repository over an
 *  [API Data: Arson Data](#api-data-arson-data)
 *  [API Data: Estimate Data](#api-data-estimate-data)
 *  [Example Query: Number of all Burglary Victims in the United States Annually](#example-query-number-of-all-burglary-victims-in-the-united-states-annually)
-*  [Example Query: Retrieve Agency by Originating Agency Identification](#example-query-retrieve-agency-by-originating-agency-identification)
+*  [Example Query: Retrieve Agency by Originating Agency Identification (ORI)](#example-query-retrieve-agency-by-originating-agency-identification-ori)
 *  [Example Query: Number of Homicide Victims in Arizona by Age Range Annually](#example-query-number-of-homicide-victims-in-arizona-by-age-range-annually)
 
 ## About Operation Refactor America
@@ -365,7 +365,7 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
       }
     }
 
-## Example Query: Retrieve Agency by Originating Agency Identification
+## Example Query: Retrieve Agency by Originating Agency Identification (ORI)
 **Query:**
 
     {
