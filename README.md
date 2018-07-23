@@ -18,9 +18,9 @@ If you'd like to contribute to this project, please fork this repository over an
 *  [API Data: Police Employment Data](#api-data-police-employment-data)
 *  [API Data: Arson Data](#api-data-arson-data)
 *  [API Data: Estimate Data](#api-data-estimate-data)
-*  [GraphQL Example Query: Number of all Burglary Victims (Annually)](#graphql-example-query-number-of-all-burglary-victims-annually)
-*  [GraphQL Example Query](#graphql-example-query-)
-*  [GraphQL Example Query](#graphql-example-query)
+*  [GraphQL Example Query: Number of all Burglary Victims in the United States(Annually)](#graphql-example-query-number-of-all-burglary-victims-in-the-united-states-annually)
+*  [GraphQL Example Query: Retrieve Agency by Originating Agency Identification (ORI)](#graphql-example-query:-retrieve-agency-by-orginating-agency-identification-ori)
+*  [GraphQL Example Query: Number of Homicide Victims in Arizona by Age Range (Annually)](#graphql-example-query:-number-of-homicide-victims-in-arizona-by-age-range-annually)
 
 
 ## About the Data
@@ -197,7 +197,7 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
 *  State Abbreviation (Note: Some states don't provide data)
 
 
-## GraphQL Query: Number of all Burglary Victims (Annually)
+## GraphQL Example Query: Number of all Burglary Victims (Annually)
 **Query:**
 
     {
@@ -362,8 +362,7 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
       }
     }
 
-
-### Example #2: Retrieve Agency by Originating Agency Identification (ORI)
+## GraphQL Example Query: Retrieve Agency by Originating Agency Identification (ORI)
 **Query:**
 
     {
@@ -405,7 +404,7 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
     }    
 
 
-### Example #3: Number of all Homicide Victims in the Arizona by Age Range (Annually)
+## GraphQL Example Query: Number of Homicide Victims in Arizona by Age Range (Annually)
 **Query:**
 
     {
