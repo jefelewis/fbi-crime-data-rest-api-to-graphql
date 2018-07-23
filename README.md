@@ -6,7 +6,8 @@ If you'd like to contribute to this project, please fork this repository over an
 ## On This Page
 *  [About the Data](#about-the-data)
 *  [About GraphQL Packages Used](#about-graphql-packages-used)
-*  [Using the GraphQL API](#using-the-graphql-api)
+*  [GraphQL Server (Start)](#graphql-server-start)
+*  [GraphQL Server (Query)](#graphql-server-query)
 *  [Testing the API Endpoints](#testing-the-api-endpoints)
 *  [API Data: Victim Data](#api-data-victim-data)
 *  [API Data: Offender Data](#api-data-offender-data)
@@ -25,9 +26,11 @@ The data comes directly from the Federal Bureau of Investigation's REST API. A s
 ## About GraphQL Packages Used
 *  **GraphQL Server:** Apollo Server
 
-## Using the GraphQL API
-    **Start GraphQL Server:** npm run server
-    **Create GraphQL Queries:** http://localhost:4000/graphiql
+## GraphQL Server (Start)
+    npm run server
+
+## GraphQL Server (Query)
+    http://localhost:4000/graphiql
 
 ## Testing the API Endpoints
     npm jest
