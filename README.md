@@ -18,7 +18,10 @@ If you'd like to contribute to this project, please fork this repository over an
 *  [API Data: Police Employment Data](#api-data-police-employment-data)
 *  [API Data: Arson Data](#api-data-arson-data)
 *  [API Data: Estimate Data](#api-data-estimate-data)
-*  [GraphQL Query Examples](#graphql-query-examples)
+*  [GraphQL Example Query #1: Number of all Burglary Victims (Annually)](#graphql-example-query-#1-number-of-all-burglary-victims-annually)
+*  [GraphQL Example Query #2](#graphql-example-query-#2)
+*  [GraphQL Example Query #3](#graphql-example-query-#3)
+
 
 ## About the Data
 The data comes directly from the Federal Bureau of Investigation's REST API. A summary of endpoints and documentation can be found here: https://crime-data-explorer.fr.cloud.gov/api
@@ -194,8 +197,7 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
 *  State Abbreviation (Note: Some states don't provide data)
 
 
-## GraphQL Query Examples
-### Example #1: Number of all Burglary Victims (Annually)
+## GraphQL Query #1 Number of all Burglary Victims (Annually)
 **Query:**
 
     {
