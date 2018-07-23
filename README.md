@@ -194,6 +194,7 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
 ## GraphQL Query Examples
 ### Example #1: Number of all Burglary Victims (Annually)
 **Query:**
+
     {
       getAllVictimData(offense: "burglary", variable: "count") {
         noun
@@ -210,6 +211,7 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
     }
 
 **GraphQL Result:**
+
     {
       "data": {
         "getAllVictimData": {
