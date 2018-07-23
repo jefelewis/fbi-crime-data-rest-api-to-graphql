@@ -422,3 +422,808 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
     }
 
 **GraphQL Result:**
+
+    {
+      "data": {
+        "getVictimDataByState": {
+          "noun": "Victim",
+          "ui_type": "basic_table",
+          "title": "Victim Age",
+          "short_title": "Age",
+          "data": [
+            {
+              "value": 0,
+              "data_year": 2005,
+              "key_type": null,
+              "key": "0-9"
+            },
+            {
+              "value": 0,
+              "data_year": 2006,
+              "key_type": null,
+              "key": "0-9"
+            },
+            {
+              "value": 1,
+              "data_year": 2007,
+              "key_type": null,
+              "key": "0-9"
+            },
+            {
+              "value": 1,
+              "data_year": 2008,
+              "key_type": null,
+              "key": "0-9"
+            },
+            {
+              "value": 2,
+              "data_year": 2009,
+              "key_type": null,
+              "key": "0-9"
+            },
+            {
+              "value": 1,
+              "data_year": 2010,
+              "key_type": null,
+              "key": "0-9"
+            },
+            {
+              "value": 1,
+              "data_year": 2011,
+              "key_type": null,
+              "key": "0-9"
+            },
+            {
+              "value": 1,
+              "data_year": 2012,
+              "key_type": null,
+              "key": "0-9"
+            },
+            {
+              "value": 4,
+              "data_year": 2013,
+              "key_type": null,
+              "key": "0-9"
+            },
+            {
+              "value": 4,
+              "data_year": 2014,
+              "key_type": null,
+              "key": "0-9"
+            },
+            {
+              "value": 0,
+              "data_year": 2015,
+              "key_type": null,
+              "key": "0-9"
+            },
+            {
+              "value": 1,
+              "data_year": 2016,
+              "key_type": null,
+              "key": "0-9"
+            },
+            {
+              "value": 0,
+              "data_year": 2005,
+              "key_type": null,
+              "key": "10-19"
+            },
+            {
+              "value": 0,
+              "data_year": 2006,
+              "key_type": null,
+              "key": "10-19"
+            },
+            {
+              "value": 0,
+              "data_year": 2007,
+              "key_type": null,
+              "key": "10-19"
+            },
+            {
+              "value": 1,
+              "data_year": 2008,
+              "key_type": null,
+              "key": "10-19"
+            },
+            {
+              "value": 0,
+              "data_year": 2009,
+              "key_type": null,
+              "key": "10-19"
+            },
+            {
+              "value": 0,
+              "data_year": 2010,
+              "key_type": null,
+              "key": "10-19"
+            },
+            {
+              "value": 1,
+              "data_year": 2011,
+              "key_type": null,
+              "key": "10-19"
+            },
+            {
+              "value": 1,
+              "data_year": 2012,
+              "key_type": null,
+              "key": "10-19"
+            },
+            {
+              "value": 3,
+              "data_year": 2013,
+              "key_type": null,
+              "key": "10-19"
+            },
+            {
+              "value": 0,
+              "data_year": 2014,
+              "key_type": null,
+              "key": "10-19"
+            },
+            {
+              "value": 2,
+              "data_year": 2015,
+              "key_type": null,
+              "key": "10-19"
+            },
+            {
+              "value": 1,
+              "data_year": 2016,
+              "key_type": null,
+              "key": "10-19"
+            },
+            {
+              "value": 0,
+              "data_year": 2005,
+              "key_type": null,
+              "key": "20-29"
+            },
+            {
+              "value": 0,
+              "data_year": 2006,
+              "key_type": null,
+              "key": "20-29"
+            },
+            {
+              "value": 5,
+              "data_year": 2007,
+              "key_type": null,
+              "key": "20-29"
+            },
+            {
+              "value": 1,
+              "data_year": 2008,
+              "key_type": null,
+              "key": "20-29"
+            },
+            {
+              "value": 4,
+              "data_year": 2009,
+              "key_type": null,
+              "key": "20-29"
+            },
+            {
+              "value": 3,
+              "data_year": 2010,
+              "key_type": null,
+              "key": "20-29"
+            },
+            {
+              "value": 2,
+              "data_year": 2011,
+              "key_type": null,
+              "key": "20-29"
+            },
+            {
+              "value": 2,
+              "data_year": 2012,
+              "key_type": null,
+              "key": "20-29"
+            },
+            {
+              "value": 3,
+              "data_year": 2013,
+              "key_type": null,
+              "key": "20-29"
+            },
+            {
+              "value": 1,
+              "data_year": 2014,
+              "key_type": null,
+              "key": "20-29"
+            },
+            {
+              "value": 4,
+              "data_year": 2015,
+              "key_type": null,
+              "key": "20-29"
+            },
+            {
+              "value": 2,
+              "data_year": 2016,
+              "key_type": null,
+              "key": "20-29"
+            },
+            {
+              "value": 1,
+              "data_year": 2005,
+              "key_type": null,
+              "key": "30-39"
+            },
+            {
+              "value": 1,
+              "data_year": 2006,
+              "key_type": null,
+              "key": "30-39"
+            },
+            {
+              "value": 1,
+              "data_year": 2007,
+              "key_type": null,
+              "key": "30-39"
+            },
+            {
+              "value": 1,
+              "data_year": 2008,
+              "key_type": null,
+              "key": "30-39"
+            },
+            {
+              "value": 2,
+              "data_year": 2009,
+              "key_type": null,
+              "key": "30-39"
+            },
+            {
+              "value": 5,
+              "data_year": 2010,
+              "key_type": null,
+              "key": "30-39"
+            },
+            {
+              "value": 0,
+              "data_year": 2011,
+              "key_type": null,
+              "key": "30-39"
+            },
+            {
+              "value": 1,
+              "data_year": 2012,
+              "key_type": null,
+              "key": "30-39"
+            },
+            {
+              "value": 0,
+              "data_year": 2013,
+              "key_type": null,
+              "key": "30-39"
+            },
+            {
+              "value": 1,
+              "data_year": 2014,
+              "key_type": null,
+              "key": "30-39"
+            },
+            {
+              "value": 0,
+              "data_year": 2015,
+              "key_type": null,
+              "key": "30-39"
+            },
+            {
+              "value": 3,
+              "data_year": 2016,
+              "key_type": null,
+              "key": "30-39"
+            },
+            {
+              "value": 1,
+              "data_year": 2005,
+              "key_type": null,
+              "key": "40-49"
+            },
+            {
+              "value": 0,
+              "data_year": 2006,
+              "key_type": null,
+              "key": "40-49"
+            },
+            {
+              "value": 2,
+              "data_year": 2007,
+              "key_type": null,
+              "key": "40-49"
+            },
+            {
+              "value": 0,
+              "data_year": 2008,
+              "key_type": null,
+              "key": "40-49"
+            },
+            {
+              "value": 2,
+              "data_year": 2009,
+              "key_type": null,
+              "key": "40-49"
+            },
+            {
+              "value": 0,
+              "data_year": 2010,
+              "key_type": null,
+              "key": "40-49"
+            },
+            {
+              "value": 3,
+              "data_year": 2011,
+              "key_type": null,
+              "key": "40-49"
+            },
+            {
+              "value": 3,
+              "data_year": 2012,
+              "key_type": null,
+              "key": "40-49"
+            },
+            {
+              "value": 1,
+              "data_year": 2013,
+              "key_type": null,
+              "key": "40-49"
+            },
+            {
+              "value": 3,
+              "data_year": 2014,
+              "key_type": null,
+              "key": "40-49"
+            },
+            {
+              "value": 1,
+              "data_year": 2015,
+              "key_type": null,
+              "key": "40-49"
+            },
+            {
+              "value": 1,
+              "data_year": 2016,
+              "key_type": null,
+              "key": "40-49"
+            },
+            {
+              "value": 0,
+              "data_year": 2005,
+              "key_type": null,
+              "key": "50-59"
+            },
+            {
+              "value": 0,
+              "data_year": 2006,
+              "key_type": null,
+              "key": "50-59"
+            },
+            {
+              "value": 0,
+              "data_year": 2007,
+              "key_type": null,
+              "key": "50-59"
+            },
+            {
+              "value": 0,
+              "data_year": 2008,
+              "key_type": null,
+              "key": "50-59"
+            },
+            {
+              "value": 0,
+              "data_year": 2009,
+              "key_type": null,
+              "key": "50-59"
+            },
+            {
+              "value": 1,
+              "data_year": 2010,
+              "key_type": null,
+              "key": "50-59"
+            },
+            {
+              "value": 3,
+              "data_year": 2011,
+              "key_type": null,
+              "key": "50-59"
+            },
+            {
+              "value": 0,
+              "data_year": 2012,
+              "key_type": null,
+              "key": "50-59"
+            },
+            {
+              "value": 1,
+              "data_year": 2013,
+              "key_type": null,
+              "key": "50-59"
+            },
+            {
+              "value": 0,
+              "data_year": 2014,
+              "key_type": null,
+              "key": "50-59"
+            },
+            {
+              "value": 0,
+              "data_year": 2015,
+              "key_type": null,
+              "key": "50-59"
+            },
+            {
+              "value": 1,
+              "data_year": 2016,
+              "key_type": null,
+              "key": "50-59"
+            },
+            {
+              "value": 0,
+              "data_year": 2005,
+              "key_type": null,
+              "key": "60-69"
+            },
+            {
+              "value": 1,
+              "data_year": 2006,
+              "key_type": null,
+              "key": "60-69"
+            },
+            {
+              "value": 1,
+              "data_year": 2007,
+              "key_type": null,
+              "key": "60-69"
+            },
+            {
+              "value": 0,
+              "data_year": 2008,
+              "key_type": null,
+              "key": "60-69"
+            },
+            {
+              "value": 0,
+              "data_year": 2009,
+              "key_type": null,
+              "key": "60-69"
+            },
+            {
+              "value": 0,
+              "data_year": 2010,
+              "key_type": null,
+              "key": "60-69"
+            },
+            {
+              "value": 2,
+              "data_year": 2011,
+              "key_type": null,
+              "key": "60-69"
+            },
+            {
+              "value": 1,
+              "data_year": 2012,
+              "key_type": null,
+              "key": "60-69"
+            },
+            {
+              "value": 1,
+              "data_year": 2013,
+              "key_type": null,
+              "key": "60-69"
+            },
+            {
+              "value": 0,
+              "data_year": 2014,
+              "key_type": null,
+              "key": "60-69"
+            },
+            {
+              "value": 3,
+              "data_year": 2015,
+              "key_type": null,
+              "key": "60-69"
+            },
+            {
+              "value": 1,
+              "data_year": 2016,
+              "key_type": null,
+              "key": "60-69"
+            },
+            {
+              "value": 0,
+              "data_year": 2005,
+              "key_type": null,
+              "key": "70-79"
+            },
+            {
+              "value": 0,
+              "data_year": 2006,
+              "key_type": null,
+              "key": "70-79"
+            },
+            {
+              "value": 0,
+              "data_year": 2007,
+              "key_type": null,
+              "key": "70-79"
+            },
+            {
+              "value": 0,
+              "data_year": 2008,
+              "key_type": null,
+              "key": "70-79"
+            },
+            {
+              "value": 0,
+              "data_year": 2009,
+              "key_type": null,
+              "key": "70-79"
+            },
+            {
+              "value": 0,
+              "data_year": 2010,
+              "key_type": null,
+              "key": "70-79"
+            },
+            {
+              "value": 2,
+              "data_year": 2011,
+              "key_type": null,
+              "key": "70-79"
+            },
+            {
+              "value": 0,
+              "data_year": 2012,
+              "key_type": null,
+              "key": "70-79"
+            },
+            {
+              "value": 0,
+              "data_year": 2013,
+              "key_type": null,
+              "key": "70-79"
+            },
+            {
+              "value": 0,
+              "data_year": 2014,
+              "key_type": null,
+              "key": "70-79"
+            },
+            {
+              "value": 0,
+              "data_year": 2015,
+              "key_type": null,
+              "key": "70-79"
+            },
+            {
+              "value": 0,
+              "data_year": 2016,
+              "key_type": null,
+              "key": "70-79"
+            },
+            {
+              "value": 0,
+              "data_year": 2005,
+              "key_type": null,
+              "key": "80-89"
+            },
+            {
+              "value": 0,
+              "data_year": 2006,
+              "key_type": null,
+              "key": "80-89"
+            },
+            {
+              "value": 0,
+              "data_year": 2007,
+              "key_type": null,
+              "key": "80-89"
+            },
+            {
+              "value": 0,
+              "data_year": 2008,
+              "key_type": null,
+              "key": "80-89"
+            },
+            {
+              "value": 0,
+              "data_year": 2009,
+              "key_type": null,
+              "key": "80-89"
+            },
+            {
+              "value": 0,
+              "data_year": 2010,
+              "key_type": null,
+              "key": "80-89"
+            },
+            {
+              "value": 0,
+              "data_year": 2011,
+              "key_type": null,
+              "key": "80-89"
+            },
+            {
+              "value": 0,
+              "data_year": 2012,
+              "key_type": null,
+              "key": "80-89"
+            },
+            {
+              "value": 0,
+              "data_year": 2013,
+              "key_type": null,
+              "key": "80-89"
+            },
+            {
+              "value": 0,
+              "data_year": 2014,
+              "key_type": null,
+              "key": "80-89"
+            },
+            {
+              "value": 0,
+              "data_year": 2015,
+              "key_type": null,
+              "key": "80-89"
+            },
+            {
+              "value": 1,
+              "data_year": 2016,
+              "key_type": null,
+              "key": "80-89"
+            },
+            {
+              "value": 0,
+              "data_year": 2005,
+              "key_type": null,
+              "key": "90-99"
+            },
+            {
+              "value": 0,
+              "data_year": 2006,
+              "key_type": null,
+              "key": "90-99"
+            },
+            {
+              "value": 0,
+              "data_year": 2007,
+              "key_type": null,
+              "key": "90-99"
+            },
+            {
+              "value": 0,
+              "data_year": 2008,
+              "key_type": null,
+              "key": "90-99"
+            },
+            {
+              "value": 0,
+              "data_year": 2009,
+              "key_type": null,
+              "key": "90-99"
+            },
+            {
+              "value": 0,
+              "data_year": 2010,
+              "key_type": null,
+              "key": "90-99"
+            },
+            {
+              "value": 0,
+              "data_year": 2011,
+              "key_type": null,
+              "key": "90-99"
+            },
+            {
+              "value": 0,
+              "data_year": 2012,
+              "key_type": null,
+              "key": "90-99"
+            },
+            {
+              "value": 0,
+              "data_year": 2013,
+              "key_type": null,
+              "key": "90-99"
+            },
+            {
+              "value": 0,
+              "data_year": 2014,
+              "key_type": null,
+              "key": "90-99"
+            },
+            {
+              "value": 0,
+              "data_year": 2015,
+              "key_type": null,
+              "key": "90-99"
+            },
+            {
+              "value": 0,
+              "data_year": 2016,
+              "key_type": null,
+              "key": "90-99"
+            },
+            {
+              "value": 0,
+              "data_year": 2005,
+              "key_type": null,
+              "key": "Unknown"
+            },
+            {
+              "value": 0,
+              "data_year": 2006,
+              "key_type": null,
+              "key": "Unknown"
+            },
+            {
+              "value": 0,
+              "data_year": 2007,
+              "key_type": null,
+              "key": "Unknown"
+            },
+            {
+              "value": 0,
+              "data_year": 2008,
+              "key_type": null,
+              "key": "Unknown"
+            },
+            {
+              "value": 0,
+              "data_year": 2009,
+              "key_type": null,
+              "key": "Unknown"
+            },
+            {
+              "value": 1,
+              "data_year": 2010,
+              "key_type": null,
+              "key": "Unknown"
+            },
+            {
+              "value": 0,
+              "data_year": 2011,
+              "key_type": null,
+              "key": "Unknown"
+            },
+            {
+              "value": 0,
+              "data_year": 2012,
+              "key_type": null,
+              "key": "Unknown"
+            },
+            {
+              "value": 0,
+              "data_year": 2013,
+              "key_type": null,
+              "key": "Unknown"
+            },
+            {
+              "value": 1,
+              "data_year": 2014,
+              "key_type": null,
+              "key": "Unknown"
+            },
+            {
+              "value": 0,
+              "data_year": 2015,
+              "key_type": null,
+              "key": "Unknown"
+            },
+            {
+              "value": 0,
+              "data_year": 2016,
+              "key_type": null,
+              "key": "Unknown"
+            }
+          ]
+        }
+      }
+    }
