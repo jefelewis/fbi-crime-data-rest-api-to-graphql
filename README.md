@@ -1,48 +1,48 @@
 # Federal Bureau of Investigation (FBI) Crime Data Explorer GraphQL Server
-Operation Refactor America's wrapped Federal Bureau of Investigation (FBI) Crime Data Explorer REST API with GraphQL. The REST endpoints have been mapped as GraphQL types and resolvers. If you'd like to contribute to this project, please fork this repository over and submit a pull request.
+Operation Refactor America's wrapped Federal Bureau of Investigation (FBI) Crime Data Explorer REST API with GraphQL. The REST endpoints have been mapped as GraphQL types and resolvers. Note: Using this API requires a free API Key, which can be acquired here: https://api.data.gov/signup/. Once recieved, go to ./config/config.js and enter the API key into APIKEY.
+
+If you'd like to contribute to this project, please fork this repository over and submit a pull request.
 
 ## On This Page
 *  [About the GraphQL API](#about-the-api)
 *  [About the Data](#about-the-data)
 *  [Using the GraphQL API](#using-the-graphql-api)
 *  [Testing the API Endpoints](#testing-the-api-endpoints)
-*  [API Data Model](#api-data-model)
+*  [API Data: Victim Data](#api-data:-victim-data)
 *  [Example GraphQL Queries](#example-graphql-queries)
 
 
-## About the API
-### Victim Data
+## API Data: Victim Data
 Victim Data requires a selection for each three categories:
 
 #### Category #1 (Geographic Level):
-United States
-Region
-State
+*  United States
+*  Region
+*  State
 
 #### Category #2 (Offense):
-Aggravated-Assualt
-Arson
-Burglary
-Homicide
-Larceny
-Motor-Vehicle-Theft
-Property-Crime
-Rape
-Robbery
-Violent-Crime
+*  Aggravated-Assualt
+*  Arson
+*  Burglary
+*  Homicide
+*  Larceny
+*  Motor-Vehicle-Theft
+*  Property-Crime
+*  Rape
+*  Robbery
+*  Violent-Crime
 
 #### Category #3 (Variable):
-Age
-Count
-Ethnicity
-Race
-Sex
-Relationship
-
+*  Age
+*  Count
+*  Ethnicity
+*  Race
+*  Sex
+*  Relationship
 
 
 ## About the Data
-
+The data comes direction from the Federal Bureau of Investigation's REST API. A summary of endpoints and documentation can be found here: https://crime-data-explorer.fr.cloud.gov/api
 
 
 ## Using the GraphQL API
@@ -71,5 +71,3 @@ npm jest
 *   **URI** – The URL to access the corporation’s complete directory record via the API.
 
 ## Example GraphQL Queries
-
-The Contacts endpoint will return an array of objects, such as:
