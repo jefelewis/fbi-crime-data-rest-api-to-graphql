@@ -27,7 +27,7 @@ If you'd like to contribute to this project, please fork this repository and sub
 Operation Refactor America is a not associated with any governement agency, but our goal is to empower citizens with transparent data. Only a fraction of government agencies provide public APIs, which are usually poorly documented, built on archaic REST architecture, and contain scattered data. Our mission is to retreive that valuable data and convert them into an intuitive and modern API using GraphQL Server.
 
 ## About the Data
-The data comes directly from the Federal Bureau of Investigation's REST API. A summary of endpoints and documentation can be found here: https://crime-data-explorer.fr.cloud.gov/api
+The data comes directly from the Federal Bureau of Investigation's REST API. The REST endpoints have been mapped as GraphQL types and resolvers. A summary of endpoints and documentation can be found here: https://crime-data-explorer.fr.cloud.gov/api
 
 ## GraphQL Server: Apollo Server
 This GraphQL server uses apollo-server-express and not Facebook's graphql-express.
