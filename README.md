@@ -26,11 +26,11 @@ The data comes directly from the Federal Bureau of Investigation's REST API. A s
 *  **GraphQL Server:** Apollo Server
 
 ## Using the GraphQL API
-npm run server
-http://localhost:4000/graphiql
+    **Start GraphQL Server:** npm run server
+    **Create GraphQL Queries:** http://localhost:4000/graphiql
 
 ## Testing the API Endpoints
-npm jest
+    npm jest
 
 ## API Data: Victim Data
 Note: Victim Data **requires one selection for each of the three categories**:
