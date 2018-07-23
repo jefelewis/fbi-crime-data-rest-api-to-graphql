@@ -5,7 +5,7 @@ If you'd like to contribute to this project, please fork this repository over an
 
 ## On This Page
 *  [About the Data](#about-the-data)
-*  [About GraphQL Packages Used](#about-graphql-packages-used)
+*  [GraphQL Server (Apollo Server)](#graphql-server-apollo-server)
 *  [GraphQL Server (Start)](#graphql-server-start)
 *  [GraphQL Server (Query)](#graphql-server-query)
 *  [Testing the API Endpoints](#testing-the-api-endpoints)
@@ -23,8 +23,8 @@ If you'd like to contribute to this project, please fork this repository over an
 ## About the Data
 The data comes directly from the Federal Bureau of Investigation's REST API. A summary of endpoints and documentation can be found here: https://crime-data-explorer.fr.cloud.gov/api
 
-## About GraphQL Packages Used
-*  **GraphQL Server:** Apollo Server
+## GraphQL (Packages Used)
+This GraphQL server uses apollo-server-express and not Facebook's graphql-express
 
 ## GraphQL Server (Start)
     npm run server
