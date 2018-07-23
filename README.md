@@ -189,50 +189,50 @@ Note: Estimate Data **requires ONE selection for the ONE category.**
 
 ## Example GraphQL Queries
 ### Example Query: Number of all Burglary Victims (Annually)
-{
-  getAllVictimData(offense: "burglary", variable: "count") {
-    noun
-    ui_type
-    title
-    short_title
-    data {
-      value
-      data_year
-      key_type
-      key
+    {
+      getAllVictimData(offense: "burglary", variable: "count") {
+        noun
+        ui_type
+        title
+        short_title
+        data {
+          value
+          data_year
+          key_type
+          key
+        }
+      }
     }
-  }
-}
 
 ### Example Query: Number of all Burglary Victims in the Midwest Region (Annually)
-{
-  getVictimDataByRegion(regionName:"midwest", offense: "burglary", variable: "count") {
-    noun
-    ui_type
-    title
-    short_title
-    data {
-      value
-      data_year
-      key_type
-      key
+    {
+      getVictimDataByRegion(regionName:"midwest", offense: "burglary", variable: "count") {
+        noun
+        ui_type
+        title
+        short_title
+        data {
+          value
+          data_year
+          key_type
+          key
+        }
+      }
     }
-  }
-}
 
 
 ### Example Query: Number of all Burglary Victims in the state of Texas (Annually)
-{
-  getVictimDataByState(stateAbbreviation:"tx", offense: "burglary", variable: "count") {
-    noun
-    ui_type
-    title
-    short_title
-    data {
-      value
-      data_year
-      key_type
-      key
+    {
+      getVictimDataByState(stateAbbreviation:"tx", offense: "burglary", variable: "count") {
+        noun
+        ui_type
+        title
+        short_title
+        data {
+          value
+          data_year
+          key_type
+          key
+        }
+      }
     }
-  }
-}
