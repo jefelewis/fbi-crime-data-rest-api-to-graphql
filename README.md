@@ -5,6 +5,7 @@ If you'd like to contribute to this project, please fork this repository over an
 
 ## On This Page
 *  [About the Data](#about-the-data)
+*  [About Operation Refactor America](#about-operation-refactor-america)
 *  [GraphQL Server: Apollo Server](#graphql-server-apollo-server)
 *  [GraphQL Server: Start](#graphql-server-start)
 *  [GraphQL Server: Query](#graphql-server-query)
@@ -22,6 +23,8 @@ If you'd like to contribute to this project, please fork this repository over an
 *  [GraphQL Example Query: Retrieve Agency by Originating Agency Identification (ORI)](#graphql-example-query:-retrieve-agency-by-orginating-agency-identification-ori)
 *  [GraphQL Example Query: Number of Homicide Victims in Arizona by Age Range Annually](#graphql-example-query:-number-of-homicide-victims-in-arizona-by-age-range-annually)
 
+## About Operation Refactor America
+Operation Refactor America's goal is to empower citizens with transparent data. However, not all government agencies provide public APIs and the agencies with public APIs are poorly documented and archaic REST APIs. Our mission is to retreive that valuable data and convert them into a modern and easy to use API using GraphQL.
 
 ## About the Data
 The data comes directly from the Federal Bureau of Investigation's REST API. A summary of endpoints and documentation can be found here: https://crime-data-explorer.fr.cloud.gov/api
