@@ -1,14 +1,14 @@
 # Federal Bureau of Investigation (FBI) Crime Data Explorer GraphQL Server
-Operation Refactor America's wrapped Federal Bureau of Investigation (FBI) Crime Data Explorer REST API with GraphQL. The REST endpoints have been mapped as GraphQL types and resolvers. Note: Using this API requires a free API Key, which can be acquired here: https://api.data.gov/signup/. Once recieved, go to ./config/config.js and enter the API key into APIKEY.
+Operation Refactor America's wrapped Federal Bureau of Investigation (FBI) Crime Data Explorer REST API with GraphQL. The REST endpoints have been mapped as GraphQL types and resolvers. **Note: Using this API requires a free API Key,** which can be acquired here: https://api.data.gov/signup/. Once recieved, go to ./config/config.js and enter the API key into APIKEY.
 
 If you'd like to contribute to this project, please fork this repository over and submit a pull request.
 
 ## On This Page
 *  [About the Data](#about-the-data)
-*  [GraphQL Server (Apollo Server)](#graphql-server-apollo-server)
-*  [GraphQL Server (Start)](#graphql-server-start)
-*  [GraphQL Server (Query)](#graphql-server-query)
-*  [Testing the API Endpoints](#testing-the-api-endpoints)
+*  [GraphQL Server: Apollo Server](#graphql-server-apollo-server)
+*  [GraphQL Server: Start](#graphql-server-start)
+*  [GraphQL Server: Query](#graphql-server-query)
+*  [GraphQL Server: Testing API Endpoints](#graphql-server-testing-the-api-endpoints)
 *  [API Data: Victim Data](#api-data-victim-data)
 *  [API Data: Offender Data](#api-data-offender-data)
 *  [API Data: Participation Data](#api-data-participation-data)
@@ -23,16 +23,16 @@ If you'd like to contribute to this project, please fork this repository over an
 ## About the Data
 The data comes directly from the Federal Bureau of Investigation's REST API. A summary of endpoints and documentation can be found here: https://crime-data-explorer.fr.cloud.gov/api
 
-## GraphQL (Packages Used)
+## GraphQL: Apollo Server
 This GraphQL server uses apollo-server-express and not Facebook's graphql-express.
 
-## GraphQL Server (Start)
+## GraphQL Server: Start
     npm run server
 
-## GraphQL Server (Query)
+## GraphQL Server: Query
     http://localhost:4000/graphiql
 
-## Testing the API Endpoints
+## GraphQL Server: Testing API Endpoints
     npm jest
 
 ## API Data: Victim Data
