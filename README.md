@@ -11,8 +11,11 @@ If you'd like to contribute to this project, please fork this repository over an
 *  [API Data: Offender Data](#api-data-offender-data)
 *  [API Data: Participation Data](#api-data-participation-data)
 *  [API Data: Offense Data](#api-data-offense-data)
-*  [API Data: Linked Offense Data](#api-data-weapons-offense-data)
+*  [API Data: Linked Offense Data](#api-data-linked-offense-data)
 *  [API Data: Weapons Offense Data](#api-data-weapons-offense-data)
+*  [API Data: Police Employment Data](#api-data-police-employment-data)
+*  [API Data: Arson Data](#api-data-arson-data)
+*  [API Data: Estimate Data](#api-data-estimate-data)
 *  [Example GraphQL Queries](#example-graphql-queries)
 
 ## About the Data
@@ -150,6 +153,38 @@ Note: Weapons Offense Data **requires ONE selection for each of the TWO categori
 *  Robbery
 *  Violent-Crime
 
+
+
+## API Data: Police Employment Data
+Note: Police Employment Data **requires ONE selection for the ONE category.**
+
+**Category #1 (Geographic Level):**
+*  United States (No argument required since there's only one country)
+*  Region
+*  State
+
+**Category #2 (Originating Agency Identification) (ONLY REQUIRED FOR AGENCY):**
+*  Ori (These can be found when running)
+
+
+
+## API Data: Arson Data
+Note: Arson Data **requires ONE selection for the ONE category.**
+
+**Category #1 (Geographic Level):**
+*  United States (No argument required since there's only one country)
+*  Region
+*  State
+
+
+
+## API Data: Estimate Data
+Note: Estimate Data **requires ONE selection for the ONE category.**
+
+**Category #1 (Geographic Level):**
+*  United States (No argument required since there's only one country)
+*  Region
+*  State
 
 
 
