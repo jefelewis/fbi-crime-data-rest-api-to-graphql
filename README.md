@@ -10,6 +10,9 @@ If you'd like to contribute to this project, please fork this repository over an
 *  [API Data: Victim Data](#api-data-victim-data)
 *  [API Data: Offender Data](#api-data-offender-data)
 *  [API Data: Participation Data](#api-data-participation-data)
+*  [API Data: Offense Data](#api-data-offense-data)
+*  [API Data: Linked Offense Data](#api-data-weapons-offense-data)
+*  [API Data: Weapons Offense Data](#api-data-weapons-offense-data)
 *  [Example GraphQL Queries](#example-graphql-queries)
 
 ## About the Data
@@ -50,6 +53,8 @@ Note: Victim Data **requires one selection for each of the three categories**:
 *  Sex
 *  Relationship
 
+
+
 ## API Data: Offender Data
 Note: Offender Data **requires one selection for each of the three categories**:
 
@@ -78,13 +83,74 @@ Note: Offender Data **requires one selection for each of the three categories**:
 *  Sex
 *  Relationship
 
+
+
 ## API Data: Participation Data
-Note: Participation Data **requires one selection for one category**:
+Note: Participation Data **requires ONE selection for ONE category**:
 
 **Category #1 (Geographic Level):**
 *  United States (No argument required since there's only one country)
 *  Region
 *  State
+
+
+
+## API Data: Offense Data
+Note: Offense Data **requires ONE selection for the ONE category.** The API only returns Offense data using the count variable, so category #3 is not needed.
+
+**Category #1 (Geographic Level) (NOT REQUIRED FOR AGENCY):**
+*  United States (No argument required since there's only one country)
+*  Region
+*  State
+
+**Category #2 (Originating Agency Identification) (ONLY REQUIRED FOR AGENCY):**
+*  Ori (These can be found when running)
+
+
+
+## API Data: Linked Offense Data
+Note: Linked Offense Data **requires ONE selection for each of the TWO categories.** The API only returns Linked Offense data using the count variable, so category #3 is not needed.
+
+**Category #1 (Geographic Level):**
+*  United States (No argument required since there's only one country)
+*  Region
+*  State
+
+**Category #2 (Offense):**
+*  Aggravated-Assualt
+*  Arson
+*  Burglary
+*  Homicide
+*  Larceny
+*  Motor-Vehicle-Theft
+*  Property-Crime
+*  Rape
+*  Robbery
+*  Violent-Crime
+
+
+
+## API Data: Weapons Offense Data
+Note: Weapons Offense Data **requires ONE selection for each of the TWO categories.** The API only returns Weapons Offense data using the count variable, so category #3 is not needed.
+
+**Category #1 (Geographic Level):**
+*  United States (No argument required since there's only one country)
+*  Region
+*  State
+
+**Category #2 (Offense):**
+*  Aggravated-Assualt
+*  Arson
+*  Burglary
+*  Homicide
+*  Larceny
+*  Motor-Vehicle-Theft
+*  Property-Crime
+*  Rape
+*  Robbery
+*  Violent-Crime
+
+
 
 
 ## API Data Model
