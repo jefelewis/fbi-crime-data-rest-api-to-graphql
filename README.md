@@ -23,7 +23,7 @@ If you'd like to contribute to this project, please fork this repository over an
 ## About the Data
 The data comes directly from the Federal Bureau of Investigation's REST API. A summary of endpoints and documentation can be found here: https://crime-data-explorer.fr.cloud.gov/api
 
-## GraphQL: Apollo Server
+## GraphQL Server: Apollo Server
 This GraphQL server uses apollo-server-express and not Facebook's graphql-express.
 
 ## GraphQL Server: Start
