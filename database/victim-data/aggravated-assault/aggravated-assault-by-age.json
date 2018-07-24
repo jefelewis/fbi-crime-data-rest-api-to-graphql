@@ -1,0 +1,44 @@
+{
+  "title": "Victim Data",
+  "offense": "Aggravated Assault",
+  "variable": "Age",
+  "unitedStates": [
+    {
+      "variable": "Northeast",
+      "data": {
+        "year": "count"
+      }
+    }
+  ],
+  "region": [
+    {
+      "variable": "Northeast",
+      "data": [
+        {
+        "year": "count"
+        }
+      ]
+    },
+    {
+      "variable": "West",
+      "data": {
+        "year": "count"
+      }
+    },
+    {
+      "variable": "South",
+      "data": {
+        "year": "count"
+      }
+    },
+    {
+      "variable": "Midwest",
+      "data": {
+        "year": "count"
+      }
+    }
+  ],
+  "states": [
+
+  ]
+}
