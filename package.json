@@ -8,11 +8,12 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "server": "nodemon --exec babel-node ./server/server.js",
+    "server": "babel-node ./server/server.js",
     "build": "webpack --mode production",
     "test": "jest",
-    "downloadPoliceEmploymentData": "babel-node ./server/database/download-police-employment-data.js",
-    "downloadVictimData": "babel-node ./server/database/download-victim-data.js"
+    "downloadParticipation": "babel-node ./server/database/download-participation-data.js",
+    "downloadPoliceEmployment": "babel-node ./server/database/download-police-employment-data.js",
+    "downloadVictim": "babel-node ./server/database/download-victim-data.js"
   },
   "repository": {
     "type": "git",
