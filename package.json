@@ -11,7 +11,8 @@
     "server": "nodemon --exec babel-node ./server/server.js",
     "build": "webpack --mode production",
     "test": "jest",
-    "downloadPoliceEmploymentData": "babel-node ./server/database/download-police-employment.js"
+    "downloadPoliceEmploymentData": "babel-node ./server/database/download-police-employment-data.js",
+    "downloadVictimData": "babel-node ./server/database/download-victim-data.js"
   },
   "repository": {
     "type": "git",
