@@ -6,7 +6,7 @@ import axios from 'axios';
 
 // Data: Geographic Data
 let regions = ["midwest", "northeast", "south", "west"];
-let states = [ "AK", "AL", "AR", "AS", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "GU", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"]
+let states = [ "AK", "AL", "AR", "AS", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"]
 
 
 // Retrieve Police Employment Data for the United States
@@ -60,7 +60,7 @@ function downloadAllPoliceEmploymentDataByState() {
     // Axios: GET Request
     axios({
       method:'get',
-      url:`https://api.usa.gov/crime/fbi/sapi/api/police-employment/states/${state}/?api_key=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv`,
+      url:`https://api.usa.gov/crime/fbi/sapi/api/police-employment/states/${state}?api_key=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv`,
       responseType:'stream'
     })
     // Write response to .json file and store in the database

@@ -16,11 +16,12 @@ function downloadAllVictimData() {
 
   // Iterate through the Variables
   for(let i = 0; i < variables.length; i++) {
+    let offense = offenses[i];
     let variable = variables[i];
 
     // Iterate through the Offenses
-    for(let i = 0; i < offenses.length; i++) {
-      let offense = offenses[i];
+    for(let j = 0; j < offenses.length; j++) {
+      let offense = offenses[j];
 
       // Axios: GET Request
       return axios({
@@ -49,7 +50,7 @@ function downloadAllVictimData() {
 //     // Axios: GET Request
 //     axios({
 //       method:'get',
-//       url:`https://api.usa.gov/crime/fbi/sapi/api/police-employment/regions/${region}/?api_key=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv`,
+//       url:`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${offense}/victim/regions/${region}?api_key=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv`,
 //       responseType:'stream'
 //     })
 //     // Write response to .json file and store in the database
@@ -74,7 +75,7 @@ function downloadAllVictimData() {
 //     // Axios: GET Request
 //     axios({
 //       method:'get',
-//       url:`https://api.usa.gov/crime/fbi/sapi/api/police-employment/states/${state}/?api_key=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv`,
+//       url:`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${offense}/victim/states/${state}?api_key=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv`,
 //       responseType:'stream'
 //     })
 //     // Write response to .json file and store in the database
