@@ -2,9 +2,9 @@
 const TYPEDEFS = `
   type Query {
 
-    getAllVictimData(offense: String, variable: String): Victim
-    getVictimDataByRegion(offense: String, regionName: String, variable: String): Victim
-    getVictimDataByState(offense: String, stateAbbreviation: String, variable: String): Victim
+    getAllVictimDataByOffense(offense: String, variable: String): Victim
+    getAllVictimDataByOffenseByRegion(offense: String, regionName: String, variable: String): Victim
+    getAllVictimDataByOffenseByState(offense: String, stateAbbreviation: String, variable: String): Victim
     
     getAllOffenderData(offense: String, variable: String): Offender
     getOffenderDataByRegion(offense: String, regionName: String, variable: String): Offender
