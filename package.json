@@ -11,6 +11,7 @@
     "server": "babel-node ./server/server.js",
     "build": "webpack --mode production",
     "test": "jest",
+    "downloadEstimates": "babel-node ./server/database/download-estimate-data.js",
     "downloadParticipation": "babel-node ./server/database/download-participation-data.js",
     "downloadPoliceEmployment": "babel-node ./server/database/download-police-employment-data.js",
     "downloadVictim": "babel-node ./server/database/download-victim-data.js"
