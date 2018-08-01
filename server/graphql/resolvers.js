@@ -126,7 +126,7 @@ const RESOLVERS = {
     // Get all Linked Offense Data (WORKING)
     // No Pagination
     getAllLinkedOffenseData: (parent, args) => {
-      return axios.get(``)
+      return axios.get(`https://api.usa.gov/crime/fbi/sapi/api/nibrs/${args.offense}/offense/linkedoffense/national/count?api_key=${APIKEY}`)
       .then((response) => response.data)
       .catch((error) => console.log(error))
     },
